@@ -9,7 +9,11 @@ fi
 export PS1='\[\e[38;5;231m\e[48;5;27m\] \h \[\e[48;5;26m\] \u \[\e[48;5;25m\] \W \[\e[0m\e[38;5;24m\] \$ \[\e[0m\]'
 
 # coloring
-alias ls='ls --color=auto'
+if [ "$(uname)" == 'Darwin' ]; then
+	alias ls='ls -G'
+else
+	alias ls='ls --color=auto'
+fi
 alias grep='grep --color=auto'
 
 # editor
