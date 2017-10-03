@@ -1,0 +1,11 @@
+[core]
+	excludesfile = /Users/kazuki/.gitignore_global
+	quotepath = false
+[user]
+	name = Kazuki Sawada
+	email = kazuki@6715.jp
+	signingkey = CFCB1F563F8149B8CE23AD56105FFD70FF15272E
+[commit]
+	gpgsign = true
+[gpg]
+	program = /usr/local/bin/gpg
