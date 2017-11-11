@@ -16,9 +16,27 @@ else
 fi
 alias grep='grep --color=auto'
 
+# nodenv
+which nodenv > /dev/null
+if [ $? != 0 ]; then
+	eval "$(nodenv init -)"
+fi
+
+# gopath
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+
 # editor
 export EDITOR=nano
 
-# gopath
-export GOPATH=~/Desktop/go
-export PATH=$PATH:$GOPATH/bin
+
+
+#################
+### FUNCTIONS ###
+#################
+dbup () {
+	CurDir=`pwd`
+	cd ~/.database/$1
+	docker-compose up -d
+	cd $CurDir
+}
