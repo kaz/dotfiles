@@ -18,7 +18,7 @@ alias grep='grep --color=auto'
 
 # nodenv
 which nodenv > /dev/null
-if [ $? != 0 ]; then
+if [ $? == 0 ]; then
 	eval "$(nodenv init -)"
 fi
 
@@ -39,4 +39,8 @@ dbup () {
 	cd ~/.database/$1
 	docker-compose up -d
 	cd $CurDir
+}
+vmup () {
+	ln -s ~/dotfiles/Vagrantfile
+	vagrant up
 }
