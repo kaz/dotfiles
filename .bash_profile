@@ -1,5 +1,5 @@
 # PS1
-uname -a | grep .local
+uname -a | grep .local > /dev/null
 if [ $? == 0 ]; then
 	export PS1='\[\e[38;5;231m\e[48;5;27m\] \h \[\e[48;5;26m\] \u \[\e[48;5;25m\] \W \[\e[0m\e[38;5;24m\] \$ \[\e[0m\]'
 elif [ $EUID = 0 ]; then
@@ -22,7 +22,7 @@ if [ $? == 0 ]; then
 fi
 
 # gopath
-which nodenv > /dev/null
+which go > /dev/null
 if [ $? == 0 ]; then
 	export GOPATH=$HOME/go
 	export PATH=$PATH:$GOPATH/bin
