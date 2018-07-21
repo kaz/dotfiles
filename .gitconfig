@@ -1,7 +1,7 @@
 [core]
-	excludesfile = /Users/kazuki/.gitignore_global
-	quotepath = false
 	autocrlf = input
+	quotepath = false
+	excludesfile = /Users/kazuki/.gitignore_global
 [user]
 	name = Kazuki Sawada
 	email = kazuki@6715.jp
@@ -11,8 +11,3 @@
 [gpg]
 	program = /usr/local/bin/gpg
 #	program = C:/Program Files (x86)/GnuPG/bin/gpg.exe
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true

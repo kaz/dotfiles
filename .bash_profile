@@ -25,7 +25,8 @@ fi
 which go > /dev/null
 if [ $? == 0 ]; then
 	export GOPATH=$HOME/go
-	export PATH=$PATH:$GOPATH/bin
+	export GOPATH_TOOLS=$HOME/.go_tools
+	export PATH=$GOPATH/bin:$GOPATH_TOOLS/bin:$PATH
 fi
 
 # for macOS
@@ -34,7 +35,7 @@ if [ "$(uname)" == 'Darwin' ]; then
 	alias ls='ls -G'
 
 	# homebrew
-	export PATH="/usr/local/sbin:$PATH"
+	export PATH=/usr/local/sbin:$PATH
 
 	# switch python for node-gyp
 	alias node-gyp='node-gyp --python $(which python2.7)'
