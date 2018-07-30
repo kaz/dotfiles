@@ -15,6 +15,9 @@ export EDITOR=nano
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
+# ssh (rmate)
+alias sshr='ssh -R 52698:localhost:52698'
+
 # nodenv
 which nodenv > /dev/null
 if [ $? == 0 ]; then
