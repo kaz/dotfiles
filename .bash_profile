@@ -1,6 +1,5 @@
 # PS1
-uname -a | grep .local > /dev/null
-if [ $? == 0 ]; then
+if [ "$(uname)" == 'Darwin' ]; then
 	export PS1='\[\e[38;5;231m\e[48;5;27m\] \h \[\e[48;5;26m\] \u \[\e[48;5;25m\] \W \[\e[0m\e[38;5;24m\] \$ \[\e[0m\]'
 elif [ $EUID = 0 ]; then
 	export PS1='\[\e[38;5;231m\e[48;5;199m\] \h \[\e[48;5;198m\] \u \[\e[48;5;197m\] \W \[\e[0m\e[38;5;196m\] \$ \[\e[0m\]'
@@ -27,6 +26,7 @@ fi
 # gopath
 which go > /dev/null
 if [ $? == 0 ]; then
+	export GO111MODULE=on
 	export GOPATH=$HOME/go
 	export GOPATH_TOOLS=$HOME/.go_tools
 	export PATH=$GOPATH/bin:$GOPATH_TOOLS/bin:$PATH
