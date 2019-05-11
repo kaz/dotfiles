@@ -14,22 +14,22 @@ export EDITOR=nano
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
-# ssh (rmate)
-alias sshr='ssh -R 52698:localhost:52698'
-
 # nodenv
-which nodenv > /dev/null
-if [ $? == 0 ]; then
+if [ -x "$(command -v nodenv)" ]; then
 	eval "$(nodenv init -)"
 fi
 
 # gopath
-which go > /dev/null
-if [ $? == 0 ]; then
+if [ -x "$(command -v go)" ]; then
 	export GO111MODULE=on
 	export GOPATH=$HOME/go
 	export GOPATH_TOOLS=$HOME/.go_tools
 	export PATH=$GOPATH/bin:$GOPATH_TOOLS/bin:$PATH
+fi
+
+# vscode
+if [ ! -x "$(command -v code)" ] && [ -x "$(command -v code-insiders)" ]; then
+	alias code='code-insiders'
 fi
 
 # for macOS
@@ -52,10 +52,6 @@ dbup () {
 	cd ~/.database/$1
 	docker-compose up -d
 	cd $CurDir
-}
-vmup () {
-	ln -s ~/dotfiles/Vagrantfile
-	vagrant up
 }
 
 ###############
