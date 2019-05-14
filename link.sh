@@ -1,5 +1,8 @@
 #!/bin/sh -xe
 
-ln -sf `pwd`/.bash_profile ~
-ln -sf `pwd`/.gitconfig ~
-ln -sf `pwd`/.database ~
+CUR=$(cd $(dirname $0) && pwd)
+
+ln -sf $CUR/.bash_profile ~
+ln -sf $CUR/.devcontainer ~
+ln -sf $CUR/.gitconfig ~
+ln -sf $CUR/.database ~

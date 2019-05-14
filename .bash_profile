@@ -53,6 +53,9 @@ dbup () {
 	docker-compose up -d
 	cd $CurDir
 }
+devcontainer() {
+	ln -sf ~/.devcontainer .
+}
 
 ###############
 ### ATCODER ###
