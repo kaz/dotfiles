@@ -14,22 +14,22 @@ export EDITOR=nano
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
-# nodenv
-if [ -x "$(command -v nodenv)" ]; then
-	eval "$(nodenv init -)"
+# bash-completion
+if [ -r "/usr/local/etc/profile.d/bash_completion.sh" ]; then
+	. "/usr/local/etc/profile.d/bash_completion.sh"
 fi
 
-# gopath
+# ruby
+if [ -x "/usr/local/opt/ruby/bin" ]; then
+	export PATH="/usr/local/opt/ruby/bin:$PATH"
+fi
+
+# golang
 if [ -x "$(command -v go)" ]; then
 	export GO111MODULE=on
 	export GOPATH=$HOME/go
 	export GOPATH_TOOLS=$HOME/.go_tools
 	export PATH=$GOPATH/bin:$GOPATH_TOOLS/bin:$PATH
-fi
-
-# vscode
-if [ ! -x "$(command -v code)" ] && [ -x "$(command -v code-insiders)" ]; then
-	alias code='code-insiders'
 fi
 
 # for macOS
