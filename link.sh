@@ -2,6 +2,7 @@
 
 CUR=$(cd $(dirname $0) && pwd)
 
+ln -sf $CUR/.eslintrc.yml ~
 ln -sf $CUR/.bash_profile ~
 ln -sf $CUR/.devcontainer ~
 ln -sf $CUR/.tmux.conf ~

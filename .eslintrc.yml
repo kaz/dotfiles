@@ -1,6 +1,4 @@
-# .eslintrc.yml
-# version 2018/04/30
-# by @kaz
+# .eslintrc.yml by @kaz
 
 parserOptions:
   ecmaVersion: 2018
@@ -20,6 +18,8 @@ rules:
   curly:
     - error
     - all
+  no-multi-spaces:
+    - error
 
   # Stylistic Issues
   brace-style:
@@ -28,13 +28,16 @@ rules:
   comma-dangle:
     - error
     - always-multiline
+  comma-spacing:
+    - error
   eol-last:
     - error
     - always
   indent:
     - error
     - tab
-    - MemberExpression: 0
+  key-spacing:
+    - error
   linebreak-style:
     - error
     - unix
@@ -43,6 +46,12 @@ rules:
     - max: 1
   no-trailing-spaces:
     - error
+  one-var:
+    - error
+    - never
+  quote-props:
+    - error
+    - as-needed
   quotes:
     - error
     - double
@@ -54,10 +63,15 @@ rules:
     - always
 
   # ECMAScript 6
+  arrow-body-style:
+    - error
   arrow-parens:
     - error
     - as-needed
   no-var:
     - error
+  prefer-arrow-callback:
+    - error
+    - allowUnboundThis: false
   prefer-const:
     - error
