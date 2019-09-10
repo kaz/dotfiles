@@ -58,3 +58,8 @@ if [ -d ~/.profile.d ]; then
 		fi
 	done
 fi
+
+# load .bashrc (for machine-specific configuration)
+if [ -r "$HOME/.bashrc" ]; then
+	. "$HOME/.bashrc"
+fi
