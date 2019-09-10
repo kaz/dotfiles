@@ -1,9 +1,10 @@
 dbup () {
-	CurDir=`pwd`
+	CUR=`pwd`
 	cd ~/.database/$1
 	docker-compose up -d
-	cd $CurDir
+	cd $CUR
 }
-devcontainer() {
+
+devcontainer () {
 	ln -sf ~/.devcontainer .
 }
