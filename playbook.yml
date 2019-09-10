@@ -20,6 +20,7 @@
           dest: .bash_profile
         - src: eslintrc.yml
           dest: .eslintrc.yml
+
     - name: put files
       template:
         src: "{{ playbook_dir }}/templates/{{ item.src }}"
@@ -27,3 +28,35 @@
       loop:
         - src: gitconfig
           dest: .gitconfig
+
+    - name: install brew packages
+      homebrew:
+        name: "{{ item }}"
+      loop:
+        - bash-completion
+        - beeftornado/rmtree/brew-rmtree
+        - ffmpeg
+        - git
+        - git-lfs
+        - gnupg
+        - go
+        - graphviz
+        - imagemagick
+        - jq
+        - make
+        - mtr
+        - nodejs
+        - python3
+        - tmux
+        - wget
+        - yarn
+
+    - name: install pip packages
+      pip:
+        name: "{{ item }}"
+        virtualenv: ~/.venv
+      loop:
+        - ansible<2.8.0
+        - awscli
+        - aws-sam-cli
+        - online-judge-tools
