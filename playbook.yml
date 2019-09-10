@@ -1,0 +1,29 @@
+- hosts: localhost
+  connection: local
+
+  tasks:
+    - name: link files
+      file:
+        state: link
+        src: "{{ playbook_dir }}/files/{{ item.src }}"
+        path: ~/{{ item.dest }}
+      loop:
+        - src: database
+          dest: .database
+        - src: devcontainer
+          dest: .devcontainer
+        - src: profile.d
+          dest: .profile.d
+        - src: tmux.conf
+          dest: .tmux.conf
+        - src: profile.bash
+          dest: .bash_profile
+        - src: eslintrc.yml
+          dest: .eslintrc.yml
+    - name: put files
+      template:
+        src: "{{ playbook_dir }}/templates/{{ item.src }}"
+        dest: ~/{{ item.dest }}
+      loop:
+        - src: gitconfig
+          dest: .gitconfig

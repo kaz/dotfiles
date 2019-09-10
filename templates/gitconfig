@@ -1,7 +1,7 @@
 [core]
 	autocrlf = input
 	quotepath = false
-	excludesfile = /Users/kazuki/.gitignore_global
+	excludesfile = ~/.gitignore_global
 [user]
 	name = Kazuki Sawada
 	email = kazuki@6715.jp

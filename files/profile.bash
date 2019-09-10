@@ -44,38 +44,12 @@ if [ "$(uname)" == 'Darwin' ]; then
 	alias node-gyp='node-gyp --python $(which python2.7)'
 fi
 
-#################
-### FUNCTIONS ###
-#################
-dbup () {
-	CurDir=`pwd`
-	cd ~/.database/$1
-	docker-compose up -d
-	cd $CurDir
-}
-devcontainer() {
-	ln -sf ~/.devcontainer .
-}
-
-###############
-### ATCODER ###
-###############
-ojd () {
-	DIR="$HOME/Desktop/oj/$(echo $1 | awk -F / '{print $7}')"
-	mkdir -p $DIR
-	cd $DIR
-	oj d $1 || return
-	code -a solve.py
-}
-ojt () {
-	python3 -m py_compile solve.py || return
-	oj t -c "python3 solve.py"
-}
-ojs () {
-	oj s -w 0 --no-guess -l python3 solve.py
-}
-
-# load .bashrc (for machine-specific configuration)
-if [ -r "$HOME/.bashrc" ]; then
-	. "$HOME/.bashrc"
+# Load profiles from ~/.profile.d
+if [ -d ~/.profile.d ]; then
+	for profile in ~/.profile.d/*.sh; do
+		if [ -r "$profile" ]; then
+			. "$profile"
+		fi
+	done
+	unset profile
 fi
