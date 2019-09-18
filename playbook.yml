@@ -43,6 +43,7 @@
         - mtr
         - nodejs
         - python3
+        - ruby
         - tmux
         - wget
         - yarn
