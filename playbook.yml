@@ -71,6 +71,7 @@
         name: "{{ item }}"
       loop:
         - 1password
+        - docker
         - firefox
         - fork
         - google-chrome
