@@ -3,6 +3,8 @@
 
   tasks:
     - name: link files
+      tags:
+        - file
       file:
         state: link
         src: "{{ playbook_dir }}/files/{{ item.src }}"
@@ -26,6 +28,8 @@
           dest: .tmux.conf
 
     - name: install brew packages
+      tags:
+        - brew
       homebrew:
         name: "{{ item }}"
       loop:
@@ -49,6 +53,8 @@
         - yarn
 
     - name: install pip packages
+      tags:
+        - pip
       pip:
         name: "{{ item }}"
         virtualenv: ~/.venv
@@ -59,6 +65,8 @@
         - online-judge-tools
 
     - name: install brew cask packages
+      tags:
+        - cask
       homebrew_cask:
         name: "{{ item }}"
       loop:
