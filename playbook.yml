@@ -27,58 +27,60 @@
         - src: tmux.conf
           dest: .tmux.conf
 
-    - name: install brew packages
-      tags:
-        - brew
-      homebrew:
-        name: "{{ item }}"
-      loop:
-        - bash-completion
-        - beeftornado/rmtree/brew-rmtree
-        - ffmpeg
-        - git
-        - git-lfs
-        - gnupg
-        - go
-        - graphviz
-        - imagemagick
-        - jq
-        - make
-        - mtr
-        - nodejs
-        - python3
-        - ruby
-        - tmux
-        - wget
-        - yarn
-
     - name: install pip packages
       tags:
         - pip
       pip:
-        name: "{{ item }}"
         virtualenv: ~/.venv
-      loop:
-        - ansible<2.8.0
-        - awscli
-        - aws-sam-cli
-        - online-judge-tools
+        name:
+          - ansible<2.8.0
+          - awscli
+          - aws-sam-cli
+          - online-judge-tools
+
+    - name: install brew packages
+      tags:
+        - brew
+      homebrew:
+        update_homebrew: yes
+        upgrade_all: yes
+        name:
+          - bash-completion
+          - beeftornado/rmtree/brew-rmtree
+          - ffmpeg
+          - git
+          - git-lfs
+          - gnupg
+          - go
+          - graphviz
+          - imagemagick
+          - jq
+          - make
+          - mtr
+          - nodejs
+          - python3
+          - ruby
+          - tmux
+          - wget
+          - yarn
+          - youtube-dl
 
     - name: install brew cask packages
       tags:
         - cask
       homebrew_cask:
-        name: "{{ item }}"
-      loop:
-        - 1password
-        - docker
-        - firefox
-        - fork
-        - google-chrome
-        - google-cloud-sdk
-        - google-japanese-ime
-        - karabiner-elements
-        - onedrive
-        - the-unarchiver
-        - thunderbird
-        - visual-studio-code
+        update_homebrew: yes
+        upgrade_all: yes
+        name:
+          - 1password
+          - docker
+          - firefox
+          - fork
+          - google-chrome
+          - google-cloud-sdk
+          - google-japanese-ime
+          - karabiner-elements
+          - onedrive
+          - the-unarchiver
+          - thunderbird
+          - visual-studio-code
