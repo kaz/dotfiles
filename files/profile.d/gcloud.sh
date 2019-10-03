@@ -1,5 +1,38 @@
-gceup () {
-	gcloud compute instances create $1 --image-project=arch-linux-gce --image-family=arch --machine-type=n1-standard-1 --boot-disk-size=25GB --preemptible
+grun () {
+	NAME=$1
+	if [ -z $NAME ]; then
+		NAME="default"
+	fi
+
+	TYPE=$2
+	if [ -z $TYPE ]; then
+		TYPE="1"
+	fi
+
+	ZONE=$3
+	if [ -z $ZONE ]; then
+		ZONE="b"
+	fi
+
+	gcloud compute instances create $NAME --machine-type=n1-standard-$TYPE --zone=asia-northeast1-$ZONE --image-project=arch-linux-gce --image-family=arch --boot-disk-size=30GB --preemptible
+}
+
+gkill () {
+	NAME=$1
+	if [ -z $NAME ]; then
+		NAME="default"
+	fi
+
+	gcloud compute instances stop $NAME
+}
+
+gdel () {
+	NAME=$1
+	if [ -z $NAME ]; then
+		NAME="default"
+	fi
+
+	gcloud compute instances delete $NAME
 }
 
 gssh () {
