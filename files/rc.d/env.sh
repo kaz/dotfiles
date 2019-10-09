@@ -1,10 +1,3 @@
-# PROMPT (red)
-PROMPT='%F{255}%K{199} %m %K{198} %n %K{197} %~ %k%F{196} $ %f'
-# PROMPT (green)
-PROMPT='%F{255}%K{037} %m %K{036} %n %K{035} %~ %k%F{034} $ %f'
-# PROMPT (blue)
-PROMPT='%F{255}%K{027} %m %K{026} %n %K{025} %~ %k%F{024} $ %f'
-
 # editor
 export EDITOR="nano"
 
