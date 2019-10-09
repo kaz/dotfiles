@@ -58,8 +58,8 @@
       tags:
         - cask
       homebrew_cask:
-        update_homebrew: yes
-        upgrade_all: yes
+        greedy: yes
+        accept_external_apps: yes
         name:
           - 1password
           - docker
