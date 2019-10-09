@@ -18,4 +18,4 @@ if [ ! -x "$(command -v ansible)" ]; then
 	pip install ansible
 fi
 
-ansible-playbook playbook.yml --diff
+ansible-playbook playbook.yml --diff $@
