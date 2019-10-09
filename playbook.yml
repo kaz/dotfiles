@@ -20,10 +20,10 @@
           dest: .gitconfig
         - src: gitignore_global
           dest: .gitignore_global
-        - src: profile.bash
-          dest: .bash_profile
-        - src: profile.d
-          dest: .profile.d
+        - src: rc.sh
+          dest: .zshrc
+        - src: rc.d
+          dest: .zshrc.d
         - src: tmux.conf
           dest: .tmux.conf
 
