@@ -12,9 +12,11 @@ export EDITOR="nano"
 alias ls="ls -G"
 alias grep="grep --color=auto"
 
-# bash-completion
-if [ -r "/usr/local/etc/profile.d/bash_completion.sh" ]; then
-	. "/usr/local/etc/profile.d/bash_completion.sh"
+# zsh-completion
+if [ -e "/usr/local/share/zsh-completions" ]; then
+    fpath=("/usr/local/share/zsh-completions" $fpath)
+	autoload -U compinit
+	compinit
 fi
 
 # ruby

@@ -45,7 +45,6 @@
         update_homebrew: yes
         upgrade_all: yes
         name:
-          - bash-completion
           - beeftornado/rmtree/brew-rmtree
           - ffmpeg
           - git
@@ -64,6 +63,7 @@
           - wget
           - yarn
           - youtube-dl
+          - zsh-completion
 
     - name: install brew cask packages
       tags:
