@@ -15,7 +15,7 @@ fi
 . ~/.venv/bin/activate
 
 if [ ! -x "$(command -v ansible)" ]; then
-	pip install "ansible<2.8.0"
+	pip install ansible
 fi
 
 ansible-playbook playbook.yml --diff

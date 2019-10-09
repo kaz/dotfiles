@@ -27,17 +27,6 @@
         - src: tmux.conf
           dest: .tmux.conf
 
-    - name: install pip packages
-      tags:
-        - pip
-      pip:
-        virtualenv: ~/.venv
-        name:
-          - ansible<2.8.0
-          - awscli
-          - aws-sam-cli
-          - online-judge-tools
-
     - name: install brew packages
       tags:
         - brew
@@ -84,3 +73,14 @@
           - the-unarchiver
           - thunderbird
           - visual-studio-code
+
+    - name: install pip packages
+      tags:
+        - pip
+      pip:
+        virtualenv: ~/.venv
+        name:
+          - ansible
+          - awscli
+          - aws-sam-cli
+          - online-judge-tools
