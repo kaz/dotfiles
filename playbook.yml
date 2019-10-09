@@ -84,3 +84,12 @@
           - awscli
           - aws-sam-cli
           - online-judge-tools
+
+    - name: install npm packages
+      tags:
+        - npm
+      npm:
+        global: yes
+        name: "{{ item }}"
+      loop:
+        - eslint
