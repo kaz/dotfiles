@@ -20,10 +20,12 @@
           dest: .gitconfig
         - src: gitignore_global
           dest: .gitignore_global
-        - src: rc.sh
+        - src: zshrc
           dest: .zshrc
-        - src: rc.d
-          dest: .zshrc.d
+        - src: config.fish
+          dest: .config/fish/config.fish
+        - src: functions
+          dest: .config/fish/functions
         - src: tmux.conf
           dest: .tmux.conf
 
@@ -36,6 +38,7 @@
         name:
           - beeftornado/rmtree/brew-rmtree
           - ffmpeg
+          - fish
           - git
           - git-lfs
           - gnupg
@@ -52,7 +55,6 @@
           - wget
           - yarn
           - youtube-dl
-          - zsh-completion
 
     - name: install brew cask packages
       tags:
