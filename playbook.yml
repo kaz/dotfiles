@@ -26,6 +26,8 @@
           dest: .config/fish/config.fish
         - src: functions
           dest: .config/fish/functions
+        - src: completions
+          dest: .config/fish/completions
         - src: tmux.conf
           dest: .tmux.conf
 
