@@ -1,3 +1,8 @@
+# load machine specific configuration
+if [ -r "$HOME/.config/fish/local.fish" ]
+	source "$HOME/.config/fish/local.fish"
+end
+
 # disable greeting
 set fish_greeting
 

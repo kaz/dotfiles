@@ -2,6 +2,16 @@
   connection: local
 
   tasks:
+
+    - name: create directory
+      tags:
+        - file
+      file:
+        state: directory
+        path: ~/{{ item }}
+      loop:
+        - .config/fish
+
     - name: link files
       tags:
         - file
@@ -20,8 +30,8 @@
           dest: .gitconfig
         - src: gitignore_global
           dest: .gitignore_global
-        - src: zshrc
-          dest: .zshrc
+        - src: profile.sh
+          dest: .zprofile
         - src: config.fish
           dest: .config/fish/config.fish
         - src: functions
