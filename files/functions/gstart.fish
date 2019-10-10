@@ -1,5 +1,4 @@
-function gstart
-	set NAME $argv[1]
+function gstart -a NAME
 	if [ -z $NAME ]
 		set NAME "default"
 	end

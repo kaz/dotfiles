@@ -1,5 +1,4 @@
-function gstop
-	set NAME $argv[1]
+function gstop -a NAME
 	if [ -z $NAME ]
 		set NAME "default"
 	end

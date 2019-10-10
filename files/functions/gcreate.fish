@@ -1,15 +1,10 @@
-function gcreate
-	set NAME $argv[1]
+function gcreate -a NAME TYPE ZONE
 	if [ -z $NAME ]
 		set NAME "default"
 	end
-
-	set TYPE $argv[2]
 	if [ -z $TYPE ]
 		set TYPE "1"
 	end
-
-	set ZONE $argv[3]
 	if [ -z $ZONE ]
 		set ZONE "b"
 	end

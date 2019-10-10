@@ -1,5 +1,4 @@
-function gdelete
-	set NAME $argv[1]
+function gdelete -a NAME
 	if [ -z $NAME ]
 		set NAME "default"
 	end
