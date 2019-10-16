@@ -9,7 +9,10 @@
       file:
         state: directory
         path: ~/{{ item }}
+        mode: 0700
       loop:
+        - .ssh
+        - .gnupg
         - .config/fish
 
     - name: link files
@@ -32,6 +35,10 @@
           dest: .gitignore_global
         - src: profile.sh
           dest: .zprofile
+        - src: ssh.config
+          dest: .ssh/config
+        - src: ssh.control
+          dest: .gnupg/sshcontrol
         - src: config.fish
           dest: .config/fish/config.fish
         - src: functions

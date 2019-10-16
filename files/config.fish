@@ -9,6 +9,12 @@ set fish_greeting
 # editor
 set -x EDITOR "nano"
 
+# ssh
+if [ -x (command -v gpgconf) ]
+	set SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket)
+	gpgconf --launch gpg-agent
+end
+
 # ruby
 if [ -x "/usr/local/opt/ruby/bin" ]
 	set -x PATH "/usr/local/opt/ruby/bin" $PATH
