@@ -70,6 +70,7 @@
           - nodejs
           - python3
           - ruby
+          - terraform
           - tmux
           - wget
           - yarn
@@ -89,6 +90,7 @@
           - google-chrome
           - google-cloud-sdk
           - google-japanese-ime
+          - java
           - karabiner-elements
           - onedrive
           - the-unarchiver
