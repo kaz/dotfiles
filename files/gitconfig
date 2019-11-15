@@ -10,4 +10,5 @@
 	gpgsign = true
 [gpg]
 	program = /usr/local/bin/gpg
-#	program = C:/Program Files (x86)/GnuPG/bin/gpg.exe
+[url "git@github.com:"]
+	insteadOf = https://github.com/
