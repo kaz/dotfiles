@@ -96,6 +96,7 @@
           - the-unarchiver
           - thunderbird
           - visual-studio-code
+          - wireshark
 
     - name: install pip packages
       tags:
@@ -107,6 +108,7 @@
           - awscli
           - aws-sam-cli
           - online-judge-tools
+          - yq
 
     - name: install npm packages
       tags:
