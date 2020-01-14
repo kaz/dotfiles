@@ -1,7 +1,7 @@
 # .eslintrc.yml by @kaz
 
 parserOptions:
-  ecmaVersion: 2018
+  ecmaVersion: 2020
 
 env:
   es6: true
@@ -19,6 +19,10 @@ rules:
     - warn
     - all
   no-multi-spaces:
+    - warn
+
+  # Strict Mode
+  strict:
     - warn
 
   # Stylistic Issues
@@ -46,6 +50,8 @@ rules:
     - max: 1
   no-trailing-spaces:
     - warn
+  object-curly-spacing:
+    - warn
   one-var:
     - warn
     - never
@@ -58,6 +64,8 @@ rules:
   semi:
     - warn
     - always
+  space-infix-ops:
+    - warn
   spaced-comment:
     - warn
     - always
