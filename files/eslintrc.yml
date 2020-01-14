@@ -16,62 +16,62 @@ rules:
 
   # Best Practices
   curly:
-    - error
+    - warn
     - all
   no-multi-spaces:
-    - error
+    - warn
 
   # Stylistic Issues
   brace-style:
-    - error
+    - warn
     - 1tbs
   comma-dangle:
-    - error
+    - warn
     - always-multiline
   comma-spacing:
-    - error
+    - warn
   eol-last:
-    - error
+    - warn
     - always
   indent:
-    - error
+    - warn
     - tab
   key-spacing:
-    - error
+    - warn
   linebreak-style:
-    - error
+    - warn
     - unix
   no-multiple-empty-lines:
-    - error
+    - warn
     - max: 1
   no-trailing-spaces:
-    - error
+    - warn
   one-var:
-    - error
+    - warn
     - never
   quote-props:
-    - error
+    - warn
     - as-needed
   quotes:
-    - error
+    - warn
     - double
   semi:
-    - error
+    - warn
     - always
   spaced-comment:
-    - error
+    - warn
     - always
 
   # ECMAScript 6
   arrow-body-style:
-    - error
+    - warn
   arrow-parens:
-    - error
+    - warn
     - as-needed
   no-var:
-    - error
+    - warn
   prefer-arrow-callback:
-    - error
+    - warn
     - allowUnboundThis: false
   prefer-const:
-    - error
+    - warn
