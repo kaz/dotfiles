@@ -39,6 +39,8 @@
           dest: .ssh/config
         - src: ssh.control
           dest: .gnupg/sshcontrol
+        - src: gpg-agent.conf
+          dest: .gnupg/gpg-agent.conf
         - src: config.fish
           dest: .config/fish/config.fish
         - src: functions
