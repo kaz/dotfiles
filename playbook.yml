@@ -58,16 +58,17 @@
         upgrade_all: yes
         name:
           - beeftornado/rmtree/brew-rmtree
-          - ffmpeg
           - fish
           - git
           - git-lfs
           - gnupg
           - go
           - graphviz
+          - hugo
           - imagemagick
           - jq
           - make
+          - mitmproxy
           - mtr
           - nodejs
           - python3
@@ -76,7 +77,6 @@
           - tmux
           - wget
           - yarn
-          - youtube-dl
 
     - name: install brew cask packages
       tags:
