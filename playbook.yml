@@ -108,7 +108,6 @@
         name:
           - ansible
           - awscli
-          - aws-sam-cli
           - online-judge-tools
           - yq
 
@@ -120,3 +119,4 @@
         name: "{{ item }}"
       loop:
         - eslint
+        - firebase-tools
