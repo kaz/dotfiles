@@ -20,6 +20,11 @@ if [ -x "/usr/local/opt/ruby/bin" ]
 	set -x PATH "/usr/local/opt/ruby/bin" $PATH
 end
 
+# rust
+if [ -d "$HOME/.cargo/bin" ]
+	set -x PATH "$HOME/.cargo/bin:$PATH"
+end
+
 # golang
 if [ -x (command -v go) ]
 	set -x GOPATH "$HOME/.go"
