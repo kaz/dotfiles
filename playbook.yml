@@ -64,20 +64,17 @@
           - gnupg
           - go
           - graphviz
-          - hugo
           - imagemagick
           - jq
           - make
-          - mitmproxy
           - mtr
-          - nodejs
+          - node
           - python3
           - ruby
           - rustup
           - terraform
           - tmux
           - wget
-          - yarn
 
     - name: install brew cask packages
       tags:
