@@ -49,6 +49,8 @@
           dest: .config/fish/completions
         - src: tmux.conf
           dest: .tmux.conf
+        - src: npmrc
+          dest: .npmrc
 
     - name: install brew packages
       tags:
@@ -118,3 +120,4 @@
       loop:
         - eslint
         - firebase-tools
+        - typescript

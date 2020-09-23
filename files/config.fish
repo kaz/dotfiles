@@ -1,28 +1,28 @@
-# load machine specific configuration
-if [ -r "$HOME/.config/fish/local.fish" ]
-	source "$HOME/.config/fish/local.fish"
-end
-
 # disable greeting
 set fish_greeting
 
 # editor
 set -x EDITOR "nano"
 
-# ssh
-if [ -x (command -v gpgconf) ]
-	set SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket)
-	gpgconf --launch gpg-agent
+# python
+if [ -r "$HOME/.venv/bin/activate.fish" ]
+	set VIRTUAL_ENV_DISABLE_PROMPT true
+	source "$HOME/.venv/bin/activate.fish"
 end
 
 # ruby
-if [ -x "/usr/local/opt/ruby/bin" ]
+if [ -d "/usr/local/opt/ruby/bin" ]
 	set -x PATH "/usr/local/opt/ruby/bin" $PATH
 end
 
 # rust
 if [ -d "$HOME/.cargo/bin" ]
-	set -x PATH "$HOME/.cargo/bin:$PATH"
+	set -x PATH "$HOME/.cargo/bin" $PATH
+end
+
+# npm
+if [ -d "$HOME/.npm/bin" ]
+	set -x PATH "$HOME/.npm/bin" $PATH
 end
 
 # golang
@@ -31,20 +31,18 @@ if [ -x (command -v go) ]
 	set -x PATH "$GOPATH/bin" $PATH
 end
 
-# brew (do not change order)
-if [ -x (command -v brew) ]
-	set -x PATH "/usr/local/sbin" $PATH
-	set SAFE_PATH $PATH
-	function brew
-		set SAVED_PATH $PATH
-		set PATH $SAFE_PATH
-		command brew $argv
-		set PATH $SAVED_PATH
-	end
+# ssh
+if [ -x (command -v gpgconf) ]
+	set SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket)
+	gpgconf --launch gpg-agent
 end
 
-# python (do not change order)
-if [ -r "$HOME/.venv/bin/activate" ]
-	set VIRTUAL_ENV_DISABLE_PROMPT true
-	source "$HOME/.venv/bin/activate.fish"
+# homebrew
+if [ -x (command -v brew) ]
+	set -x PATH "/usr/local/sbin" $PATH
+end
+
+# load machine specific configuration
+if [ -r "$HOME/.config/fish/local.fish" ]
+	source "$HOME/.config/fish/local.fish"
 end
