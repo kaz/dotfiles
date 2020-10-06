@@ -1,20 +1,19 @@
 version: "3"
 
-services:
+volumes:
+  mariadb:
 
+services:
   mariadb:
     image: mariadb
     volumes:
-      - ./mariadb:/var/lib/mysql
+      - mariadb:/var/lib/mysql
     ports:
       - 3306:3306
     environment:
       - MYSQL_ROOT_PASSWORD=password
-
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
-    volumes:
-      - ./phpmyadmin:/sessions
     ports:
       - 8080:80
     environment:

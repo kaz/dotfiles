@@ -1,18 +1,18 @@
 version: "3"
 
-services:
-
+volumes:
   elasticsearch:
-    image: elasticsearch:7.2.0
+
+services:
+  elasticsearch:
+    image: elasticsearch:7.9.2
     volumes:
-      - ./elasticsearch:/usr/share/elasticsearch/data
+      - elasticsearch:/usr/share/elasticsearch/data
     ports:
       - 9200:9200
     environment:
       discovery.type: single-node
-
-
   kibana:
-    image: kibana:7.2.0
+    image: kibana:7.9.2
     ports:
       - 5601:5601
