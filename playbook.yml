@@ -120,4 +120,5 @@
       loop:
         - eslint
         - firebase-tools
+        - ts-node
         - typescript
