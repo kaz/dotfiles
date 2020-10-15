@@ -73,7 +73,7 @@
           - make
           - mtr
           - node
-          - python3
+          - python
           - ruby
           - rustup
           - terraform

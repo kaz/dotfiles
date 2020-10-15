@@ -1,11 +1,12 @@
 #!/bin/sh
 
-if [ ! -x "$(command -v brew)" ]; then
+if [ ! -x /usr/local/bin/brew ]; then
 	bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 fi
 
-if [ ! -x "$(command -v python3)" ]; then
-	brew install python3
+if [ ! -x /usr/local/bin/python3 ]; then
+	brew install python
+	brew link --force python
 fi
 
 if [ ! -d ~/.venv ]; then
@@ -18,4 +19,4 @@ if [ ! -x "$(command -v ansible)" ]; then
 	pip install ansible
 fi
 
-ansible-playbook playbook.yml --diff $@
+ansible-playbook playbook.yml "$@"
