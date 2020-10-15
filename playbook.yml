@@ -73,6 +73,7 @@
           - make
           - mtr
           - node
+          - protobuf
           - python
           - ruby
           - rustup
@@ -97,19 +98,20 @@
         accept_external_apps: yes
         name:
           - 1password
+          - adoptopenjdk
           - docker
           - firefox
           - fork
           - google-chrome
           - google-cloud-sdk
           - google-japanese-ime
-          - java
           - karabiner-elements
           - onedrive
           - the-unarchiver
           - thunderbird
           - visual-studio-code
           - wireshark
+          - zoomus
 
     - name: install pip packages
       tags:
