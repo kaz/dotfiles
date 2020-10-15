@@ -80,6 +80,15 @@
           - tmux
           - wget
 
+    - name: link brew packages
+      tags:
+        - brew
+      homebrew:
+        state: linked
+        name:
+          - python
+          - ruby
+
     - name: install brew cask packages
       tags:
         - cask
