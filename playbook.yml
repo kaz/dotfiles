@@ -23,18 +23,20 @@
         src: "{{ playbook_dir }}/files/{{ item.src }}"
         path: ~/{{ item.dest }}
       loop:
+        - src: profile.sh
+          dest: .zprofile
+        - src: prettierrc.yml
+          dest: .prettierrc.yml
         - src: eslintrc.yml
           dest: .eslintrc.yml
-        - src: database
-          dest: .database
-        - src: devcontainer
-          dest: .devcontainer
+        - src: npmrc
+          dest: .npmrc
+        - src: tmux.conf
+          dest: .tmux.conf
         - src: gitconfig
           dest: .gitconfig
         - src: gitignore_global
           dest: .gitignore_global
-        - src: profile.sh
-          dest: .zprofile
         - src: ssh.config
           dest: .ssh/config
         - src: ssh.control
@@ -47,10 +49,10 @@
           dest: .config/fish/functions
         - src: completions
           dest: .config/fish/completions
-        - src: tmux.conf
-          dest: .tmux.conf
-        - src: npmrc
-          dest: .npmrc
+        - src: database
+          dest: .database
+        - src: devcontainer
+          dest: .devcontainer
 
     - name: install brew packages
       tags:
