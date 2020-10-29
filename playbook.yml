@@ -13,6 +13,7 @@
       loop:
         - .ssh
         - .gnupg
+        - .npm/lib
         - .config/fish
 
     - name: link files
