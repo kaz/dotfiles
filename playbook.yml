@@ -135,3 +135,11 @@
         - firebase-tools
         - ts-node
         - typescript
+
+    - name: install go packages
+      tags:
+        - go
+      go_get:
+        name: "{{ item }}"
+      loop:
+        - github.com/golang/protobuf/protoc-gen-go
