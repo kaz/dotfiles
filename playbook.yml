@@ -114,6 +114,7 @@
           - ansible
           - awscli
           - online-judge-tools
+          - pip
           - yq
 
     - name: install npm packages
