@@ -143,3 +143,4 @@
         name: "{{ item }}"
       loop:
         - github.com/golang/protobuf/protoc-gen-go
+        - golang.org/x/tools/gopls
