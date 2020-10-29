@@ -6,11 +6,10 @@ fi
 
 if [ ! -x /usr/local/bin/python3 ]; then
 	brew install python
-	brew link --force python
 fi
 
-if [ ! -d ~/.venv ]; then
-	python3 -m venv ~/.venv
+if [ ! -r ~/.venv/bin/activate ]; then
+	/usr/local/bin/python3 -m venv ~/.venv
 fi
 
 . ~/.venv/bin/activate
