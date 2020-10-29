@@ -78,6 +78,7 @@
           - imagemagick
           - jq
           - make
+          - mas
           - mtr
           - node
           - protobuf
@@ -109,6 +110,15 @@
           - visual-studio-code
           - wireshark
           - zoomus
+
+    - name: install mas packages
+      tags:
+        - mas
+      mas:
+        name: "{{ item }}"
+      loop:
+        - Magnet
+        - Microsoft Remote Desktop
 
     - name: install pip packages
       tags:
