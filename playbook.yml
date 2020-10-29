@@ -55,12 +55,18 @@
         - src: devcontainer
           dest: .devcontainer
 
+    - name: update homebrew itself
+      tags:
+        - brew
+        - cask
+      homebrew:
+        update_homebrew: yes
+
     - name: install brew packages
       tags:
         - brew
       homebrew:
-        update_homebrew: yes
-        upgrade_all: yes
+        state: latest
         name:
           - beeftornado/rmtree/brew-rmtree
           - fish
@@ -86,8 +92,7 @@
       tags:
         - cask
       homebrew_cask:
-        greedy: yes
-        accept_external_apps: yes
+        state: latest
         name:
           - 1password
           - adoptopenjdk
@@ -109,6 +114,7 @@
       tags:
         - pip
       pip:
+        state: latest
         virtualenv: ~/.venv
         name:
           - ansible
@@ -121,6 +127,7 @@
       tags:
         - npm
       npm:
+        state: latest
         global: yes
         name: "{{ item }}"
       loop:
