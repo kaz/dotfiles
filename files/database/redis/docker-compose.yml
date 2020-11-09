@@ -2,6 +2,7 @@ version: "3"
 
 volumes:
   redis:
+  redisinsight:
 
 services:
   redis:
@@ -10,3 +11,9 @@ services:
       - redis:/data
     ports:
       - 6379:6379
+  redisinsight:
+    image: redislabs/redisinsight
+    volumes:
+      - redisinsight:/db
+    ports:
+      - 18002:8001
