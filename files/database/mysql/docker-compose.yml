@@ -1,13 +1,13 @@
 version: "3"
 
 volumes:
-  mariadb:
+  mysql:
 
 services:
-  mariadb:
-    image: mariadb
+  mysql:
+    image: mysql
     volumes:
-      - mariadb:/var/lib/mysql
+      - mysql:/var/lib/mysql
     ports:
       - 3306:3306
     environment:
@@ -18,6 +18,6 @@ services:
       - 18001:80
     environment:
       - PMA_ARBITRARY=1
-      - PMA_HOST=mariadb
+      - PMA_HOST=mysql
       - PMA_USER=root
       - PMA_PASSWORD=password
