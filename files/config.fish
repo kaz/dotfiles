@@ -31,15 +31,20 @@ if [ -x (command -v go) ]
 	set -x PATH "$GOPATH/bin" $PATH
 end
 
+# homebrew
+if [ -x (command -v brew) ]
+	set -x PATH "/usr/local/sbin" $PATH
+end
+
 # ssh
 if [ -x (command -v gpgconf) ]
 	set SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket)
 	gpgconf --launch gpg-agent
 end
 
-# homebrew
-if [ -x (command -v brew) ]
-	set -x PATH "/usr/local/sbin" $PATH
+# docker
+if [ -x (command -v docker) ]
+	set -x DOCKER_BUILDKIT 1
 end
 
 # load machine specific configuration
