@@ -14,7 +14,9 @@
         - .ssh
         - .gnupg
         - .npm/lib
+        - .config/karabiner
         - .config/fish
+        - .local/share/fish
 
     - name: link files
       tags:
@@ -54,6 +56,19 @@
           dest: .database
         - src: devcontainer
           dest: .devcontainer
+
+    - name: link files on Google Drive
+      tags:
+        - file
+      file:
+        state: link
+        src: ~/GoogleDrive/{{ item.src }}
+        path: ~/{{ item.dest }}
+      loop:
+        - src: app/fish_history
+          dest: .local/share/fish/fish_history
+        - src: app/karabiner.json
+          dest: .config/karabiner/karabiner.json
 
     - name: update homebrew itself
       tags:
