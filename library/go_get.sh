@@ -2,6 +2,8 @@
 
 . $1
 
+GOPATH="$HOME/.go"
+
 if [ -x "$GOPATH/bin/$(basename $name)" ]; then
     echo "{\"changed\":false}"
     exit 0
