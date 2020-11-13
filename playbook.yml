@@ -126,7 +126,6 @@
           - thunderbird
           - visual-studio-code
           - wireshark
-          - zoomus
 
     - name: install mas packages
       tags:
