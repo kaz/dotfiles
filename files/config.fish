@@ -12,6 +12,7 @@ end
 # docker
 if [ -x (command -v docker) ]
 	set -x DOCKER_BUILDKIT 1
+	set -x COMPOSE_DOCKER_CLI_BUILD 1
 end
 
 # ssh
