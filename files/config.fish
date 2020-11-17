@@ -5,9 +5,10 @@ set fish_greeting
 set -x EDITOR "nano"
 
 # python
-if [ -r "$HOME/.venv/bin/activate.fish" ]
+set PYTHON_INCLUDE "$HOME/.venv/bin/activate.fish"
+if [ -r $PYTHON_INCLUDE ]
 	set VIRTUAL_ENV_DISABLE_PROMPT true
-	source "$HOME/.venv/bin/activate.fish"
+	source $PYTHON_INCLUDE
 end
 
 # gcloud
@@ -17,18 +18,21 @@ if [ -r $GCLOUD_INCLUDE ]
 end
 
 # ruby
-if [ -d "/usr/local/opt/ruby/bin" ]
-	set -x PATH "/usr/local/opt/ruby/bin" $PATH
+set RUBY_PATH "/usr/local/opt/ruby/bin"
+if [ -d $RUBY_PATH ]
+	set -x PATH $RUBY_PATH $PATH
 end
 
-# rust
-if [ -d "$HOME/.cargo/bin" ]
-	set -x PATH "$HOME/.cargo/bin" $PATH
+# cargo
+set CARGO_PATH "$HOME/.cargo/bin"
+if [ -d $CARGO_PATH ]
+	set -x PATH $CARGO_PATH $PATH
 end
 
 # npm
-if [ -d "$HOME/.npm/bin" ]
-	set -x PATH "$HOME/.npm/bin" $PATH
+set NPM_PATH "$HOME/.npm/bin"
+if [ -d $NPM_PATH ]
+	set -x PATH $NPM_PATH $PATH
 end
 
 # golang
@@ -54,6 +58,7 @@ if [ -x (command -v docker) ]
 end
 
 # load machine specific configuration
-if [ -r "$HOME/.config/fish/local.fish" ]
-	source "$HOME/.config/fish/local.fish"
+set LOCAL_INCLUDE "$HOME/.config/fish/local.fish"
+if [ -r $LOCAL_INCLUDE ]
+	source $LOCAL_INCLUDE
 end
