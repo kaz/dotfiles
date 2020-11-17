@@ -10,6 +10,12 @@ if [ -r "$HOME/.venv/bin/activate.fish" ]
 	source "$HOME/.venv/bin/activate.fish"
 end
 
+# gcloud
+set GCLOUD_INCLUDE "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc"
+if [ -r $GCLOUD_INCLUDE ]
+	source $GCLOUD_INCLUDE
+end
+
 # ruby
 if [ -d "/usr/local/opt/ruby/bin" ]
 	set -x PATH "/usr/local/opt/ruby/bin" $PATH
