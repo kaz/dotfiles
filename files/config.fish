@@ -4,17 +4,26 @@ set fish_greeting
 # editor
 set -x EDITOR "nano"
 
-# python
-set PYTHON_INCLUDE "$HOME/.venv/bin/activate.fish"
-if [ -r $PYTHON_INCLUDE ]
-	set VIRTUAL_ENV_DISABLE_PROMPT true
-	source $PYTHON_INCLUDE
+# homebrew
+if [ -x (command -v brew) ]
+	set -x PATH "/usr/local/sbin" $PATH
 end
 
-# gcloud
-set GCLOUD_INCLUDE "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc"
-if [ -r $GCLOUD_INCLUDE ]
-	source $GCLOUD_INCLUDE
+# docker
+if [ -x (command -v docker) ]
+	set -x DOCKER_BUILDKIT 1
+end
+
+# ssh
+if [ -x (command -v gpgconf) ]
+	set SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket)
+	gpgconf --launch gpg-agent
+end
+
+# golang
+if [ -x (command -v go) ]
+	set -x GOPATH "$HOME/.go"
+	set -x PATH "$GOPATH/bin" $PATH
 end
 
 # ruby
@@ -35,26 +44,17 @@ if [ -d $NPM_PATH ]
 	set -x PATH $NPM_PATH $PATH
 end
 
-# golang
-if [ -x (command -v go) ]
-	set -x GOPATH "$HOME/.go"
-	set -x PATH "$GOPATH/bin" $PATH
+# python
+set PYTHON_INCLUDE "$HOME/.venv/bin/activate.fish"
+if [ -r $PYTHON_INCLUDE ]
+	set VIRTUAL_ENV_DISABLE_PROMPT true
+	source $PYTHON_INCLUDE
 end
 
-# homebrew
-if [ -x (command -v brew) ]
-	set -x PATH "/usr/local/sbin" $PATH
-end
-
-# ssh
-if [ -x (command -v gpgconf) ]
-	set SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket)
-	gpgconf --launch gpg-agent
-end
-
-# docker
-if [ -x (command -v docker) ]
-	set -x DOCKER_BUILDKIT 1
+# gcloud
+set GCLOUD_INCLUDE "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc"
+if [ -r $GCLOUD_INCLUDE ]
+	source $GCLOUD_INCLUDE
 end
 
 # load machine specific configuration
