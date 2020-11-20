@@ -62,14 +62,14 @@
         - file
       file:
         state: link
-        src: ~/GoogleDrive/{{ item.src }}
+        src: ~/GoogleDrive/linked/{{ item.src }}
         path: ~/{{ item.dest }}
         force: yes
         follow: no
       loop:
-        - src: app/fish_history
-          dest: .local/share/fish/fish_history
-        - src: app/karabiner.json
+        - src: fish
+          dest: .local/share/fish
+        - src: karabiner.json
           dest: .config/karabiner/karabiner.json
 
     - name: update homebrew itself
