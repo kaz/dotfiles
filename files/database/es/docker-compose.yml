@@ -12,6 +12,8 @@ services:
       - 9200:9200
     environment:
       discovery.type: single-node
+      bootstrap.memory_lock: "true"
+      ES_JAVA_OPTS: -Xms512m -Xms512m
   kibana:
     image: kibana:7.9.3
     ports:
