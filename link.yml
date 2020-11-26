@@ -1,0 +1,32 @@
+- name: create directory
+  file:
+    state: directory
+    path: "{{ item }}"
+    mode: 0700
+  loop:
+    - ~/.config
+    - ~/.local/share
+    - ~/GoogleDrive/linked/karabiner
+    - ~/GoogleDrive/linked/fish
+    - ~/.linked/.config/karabiner/assets
+    - ~/.linked/.config/karabiner/automatic_backups
+    - ~/.linked/.local/share/fish/generated_completions
+
+- name: link files
+  file:
+    state: link
+    src: "{{ item.src }}"
+    path: "{{ item.dest }}"
+    force: yes
+    follow: no
+  loop:
+    - src: ~/GoogleDrive/linked/karabiner
+      dest: ~/.config/karabiner
+    - src: ~/GoogleDrive/linked/fish
+      dest: ~/.local/share/fish
+    - src: ~/.linked/.config/karabiner/assets
+      dest: ~/GoogleDrive/linked/karabiner/assets
+    - src: ~/.linked/.config/karabiner/automatic_backups
+      dest: ~/GoogleDrive/linked/karabiner/automatic_backups
+    - src: ~/.linked/.local/share/fish/generated_completions
+      dest: ~/GoogleDrive/linked/fish/generated_completions
