@@ -50,12 +50,8 @@
           dest: .config/fish/config.fish
         - src: functions
           dest: .config/fish/functions
-        - src: completions
-          dest: .config/fish/completions
         - src: database
           dest: .database
-        - src: devcontainer
-          dest: .devcontainer
 
     - name: link files on Google Drive
       tags:
