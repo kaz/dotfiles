@@ -28,8 +28,6 @@
           dest: .zprofile
         - src: prettierrc.yml
           dest: .prettierrc.yml
-        - src: eslintrc.yml
-          dest: .eslintrc.yml
         - src: npmrc
           dest: .npmrc
         - src: tmux.conf
@@ -140,7 +138,7 @@
         global: yes
         name: "{{ item }}"
       loop:
-        - eslint
+        - prettier
         - ts-node
         - ts-protoc-gen
 
