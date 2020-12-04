@@ -150,7 +150,5 @@
       go_get:
         name: "{{ item }}"
       loop:
-        - github.com/ramya-rao-a/go-outline
-        - golang.org/x/tools/gopls
         - google.golang.org/grpc/cmd/protoc-gen-go-grpc
         - google.golang.org/protobuf/cmd/protoc-gen-go

@@ -9,6 +9,6 @@ if [ -x "$GOPATH/bin/$(basename $name)" ]; then
     exit 0
 fi
 
-go get -u "$name"
+GO111MODULE=on go get "$name@latest"
 
 echo "{\"changed\":true}"
