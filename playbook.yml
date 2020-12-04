@@ -141,9 +141,8 @@
         name: "{{ item }}"
       loop:
         - eslint
-        - firebase-tools
         - ts-node
-        - typescript
+        - ts-protoc-gen
 
     - name: install go packages
       tags:
