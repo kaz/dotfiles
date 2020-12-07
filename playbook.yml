@@ -80,11 +80,11 @@
           - mtr
           - node
           - protobuf
+          - protoc-gen-grpc-web
           - python
           - ruby
           - rustup
           - terraform
-          - tmux
           - wget
 
     - name: install brew cask packages
