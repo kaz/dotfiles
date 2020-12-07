@@ -112,6 +112,7 @@
       tags:
         - mas
       mas:
+        state: latest
         name: "{{ item }}"
       loop:
         - Magnet
