@@ -137,6 +137,7 @@
         name: "{{ item }}"
       loop:
         - "@cloudflare/wrangler"
+        - "@trivago/prettier-plugin-sort-imports"
         - prettier
         - ts-node
         - ts-protoc-gen

@@ -1,4 +1,8 @@
-printWidth: 2147483647
+printWidth: 120
 useTabs: true
 trailingComma: all
 arrowParens: avoid
+
+importOrder:
+  - "^[^./]"
+  - "^[./]"
