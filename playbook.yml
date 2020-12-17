@@ -2,7 +2,6 @@
   connection: local
 
   tasks:
-
     - name: create directory
       tags:
         - file
@@ -94,7 +93,6 @@
         state: latest
         name:
           - 1password
-          - adoptopenjdk
           - docker
           - firefox
           - fork
@@ -103,7 +101,6 @@
           - google-cloud-sdk
           - google-japanese-ime
           - karabiner-elements
-          - the-unarchiver
           - thunderbird
           - visual-studio-code
           - wireshark
