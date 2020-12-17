@@ -136,6 +136,7 @@
         global: yes
         name: "{{ item }}"
       loop:
+        - "@cloudflare/wrangler"
         - prettier
         - ts-node
         - ts-protoc-gen
