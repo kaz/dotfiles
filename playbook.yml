@@ -137,10 +137,10 @@
         name: "{{ item }}"
       loop:
         - "@cloudflare/wrangler"
+        - "@protobuf-ts/plugin"
         - "@trivago/prettier-plugin-sort-imports"
         - prettier
         - ts-node
-        - ts-protoc-gen
 
     - name: install go packages
       tags:
