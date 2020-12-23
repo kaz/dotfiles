@@ -139,6 +139,7 @@
         - "@cloudflare/wrangler"
         - "@protobuf-ts/plugin"
         - "@trivago/prettier-plugin-sort-imports"
+        - npm-check-updates
         - prettier
         - ts-node
 
