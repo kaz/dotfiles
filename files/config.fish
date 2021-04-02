@@ -4,10 +4,15 @@ set fish_greeting
 # editor
 set -x EDITOR "nano"
 
-# homebrew
-if [ -x (command -v brew) ]
-	set -x PATH "/usr/local/sbin" $PATH
+# homebrew: determine prefix
+if [ (/usr/bin/uname -m) = "arm64" ]
+	set HOMEBREW_PREFIX "/opt/homebrew"
+else
+	set HOMEBREW_PREFIX "/usr/local"
 end
+
+# homebrew: add PATH
+set -x PATH "$HOMEBREW_PREFIX/bin" "$HOMEBREW_PREFIX/sbin" $PATH
 
 # docker
 if [ -x (command -v docker) ]
@@ -29,7 +34,7 @@ if [ -x (command -v go) ]
 end
 
 # ruby
-set RUBY_PATH "/usr/local/opt/ruby/bin"
+set RUBY_PATH "$HOMEBREW_PREFIX/opt/ruby/bin"
 if [ -d $RUBY_PATH ]
 	set -x PATH $RUBY_PATH $PATH
 end
@@ -54,7 +59,7 @@ if [ -r $PYTHON_INCLUDE ]
 end
 
 # gcloud
-set GCLOUD_INCLUDE "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc"
+set GCLOUD_INCLUDE "$HOMEBREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc"
 if [ -r $GCLOUD_INCLUDE ]
 	source $GCLOUD_INCLUDE
 end

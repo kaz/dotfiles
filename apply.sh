@@ -1,15 +1,24 @@
 #!/bin/sh
 
-if [ ! -x /usr/local/bin/brew ]; then
-	bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+if [[ "$(/usr/bin/uname -m)" == "arm64" ]]; then
+	HOMEBREW_PREFIX="/opt/homebrew"
+else
+	HOMEBREW_PREFIX="/usr/local"
 fi
 
-if [ ! -x /usr/local/bin/python3 ]; then
-	brew install python
+BREW_BIN="$HOMEBREW_PREFIX/bin/brew"
+PYTHON_BIN="$HOMEBREW_PREFIX/bin/python3"
+
+if [ ! -x $BREW_BIN ]; then
+	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
+
+if [ ! -x $PYTHON_BIN ]; then
+	$BREW_BIN install python
 fi
 
 if [ ! -r ~/.venv/bin/activate ]; then
-	/usr/local/bin/python3 -m venv ~/.venv
+	$PYTHON_BIN -m venv ~/.venv
 fi
 
 . ~/.venv/bin/activate
