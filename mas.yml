@@ -1,0 +1,7 @@
+- name: install mas packages
+  mas:
+    state: latest
+    name: "{{ item }}"
+  loop:
+    - Magnet
+    - Microsoft Remote Desktop

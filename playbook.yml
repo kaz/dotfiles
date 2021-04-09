@@ -14,102 +14,20 @@
       tags:
         - link
 
-    - name: update homebrew itself
-      tags:
-        - brew
-        - cask
-      homebrew:
-        update_homebrew: yes
+    - import_tasks: brew.yml
 
-    - name: install brew packages
-      tags:
-        - brew
-      homebrew:
-        state: latest
-        name:
-          - beeftornado/rmtree/brew-rmtree
-          - fish
-          - git
-          - git-lfs
-          - gnupg
-          - go
-          - graphviz
-          - imagemagick
-          - jq
-          - make
-          - mas
-          - mtr
-          - node
-          - protobuf
-          - protoc-gen-grpc-web
-          - python
-          - ruby
-          - rustup
-          - terraform
-          - wget
-
-    - name: install brew cask packages
-      tags:
-        - cask
-      homebrew_cask:
-        state: latest
-        name:
-          - 1password
-          - docker
-          - firefox
-          - fork
-          - google-backup-and-sync
-          - google-chrome
-          - google-cloud-sdk
-          - google-japanese-ime
-          - karabiner-elements
-          - openvpn-connect
-          - visual-studio-code
-          - wireshark
-
-    - name: install mas packages
+    - import_tasks: mas.yml
       tags:
         - mas
-      mas:
-        state: latest
-        name: "{{ item }}"
-      loop:
-        - Magnet
-        - Microsoft Remote Desktop
 
-    - name: install pip packages
+    - import_tasks: pip.yml
       tags:
         - pip
-      pip:
-        state: latest
-        virtualenv: ~/.venv
-        name:
-          - ansible
-          - awscli
-          - online-judge-tools
-          - pip
-          - yq
 
-    - name: install npm packages
+    - import_tasks: npm.yml
       tags:
         - npm
-      npm:
-        state: latest
-        global: yes
-        name: "{{ item }}"
-      loop:
-        - "@cloudflare/wrangler"
-        - "@protobuf-ts/plugin"
-        - "@trivago/prettier-plugin-sort-imports"
-        - npm-check-updates
-        - prettier
-        - ts-node
 
-    - name: install go packages
+    - import_tasks: go.yml
       tags:
         - go
-      go_get:
-        name: "{{ item }}"
-      loop:
-        - google.golang.org/grpc/cmd/protoc-gen-go-grpc
-        - google.golang.org/protobuf/cmd/protoc-gen-go

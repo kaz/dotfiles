@@ -1,6 +1,4 @@
 - name: create directory
-  tags:
-    - file
   file:
     state: directory
     path: ~/{{ item }}
@@ -8,12 +6,9 @@
   loop:
     - .ssh
     - .gnupg
-    - .npm/lib
     - .config/fish
 
 - name: link files
-  tags:
-    - file
   template:
     src: "{{ playbook_dir }}/files/{{ item.src }}"
     dest: ~/{{ item.dest }}

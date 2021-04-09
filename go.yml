@@ -1,0 +1,8 @@
+- name: install go packages
+  tags:
+    - go
+  go_get:
+    name: "{{ item }}"
+  loop:
+    - google.golang.org/grpc/cmd/protoc-gen-go-grpc
+    - google.golang.org/protobuf/cmd/protoc-gen-go
