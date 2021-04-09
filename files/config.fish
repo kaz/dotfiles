@@ -24,7 +24,6 @@ end
 
 # golang
 if [ -x (command -v go) ]
-	set -x GO111MODULE on
 	set -x GOPATH "$HOME/.go"
 	set -x PATH "$GOPATH/bin" $PATH
 end
