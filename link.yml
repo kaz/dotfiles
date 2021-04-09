@@ -4,7 +4,7 @@
     path: "{{ item }}"
     mode: 0700
   loop:
-    - ~/.config
+    - ~/.config/fish
     - ~/.local/share
     - ~/GoogleDrive/linked/karabiner
     - ~/GoogleDrive/linked/fish
@@ -20,6 +20,10 @@
     force: yes
     follow: no
   loop:
+    - src: "{{ playbook_dir }}/files/functions"
+      dest: ~/.config/fish/functions
+    - src: "{{ playbook_dir }}/files/database"
+      dest: ~/.database
     - src: ~/GoogleDrive/linked/karabiner
       dest: ~/.config/karabiner
     - src: ~/GoogleDrive/linked/fish

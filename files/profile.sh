@@ -1,10 +1,4 @@
-if [[ "$(/usr/bin/uname -m)" == "arm64" ]]; then
-	HOMEBREW_PREFIX="/opt/homebrew"
-else
-	HOMEBREW_PREFIX="/usr/local"
-fi
-
-FISH_BIN="$HOMEBREW_PREFIX/bin/fish"
+FISH_BIN="{{ homebrew_prefix[ansible_architecture] }}/bin/fish"
 if [ -x $FISH_BIN ]; then
 	exec $FISH_BIN
 fi

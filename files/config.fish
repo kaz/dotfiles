@@ -5,11 +5,7 @@ set fish_greeting
 set -x EDITOR "nano"
 
 # homebrew: determine prefix
-if [ (/usr/bin/uname -m) = "arm64" ]
-	set HOMEBREW_PREFIX "/opt/homebrew"
-else
-	set HOMEBREW_PREFIX "/usr/local"
-end
+set HOMEBREW_PREFIX "{{ homebrew_prefix[ansible_architecture] }}"
 
 # homebrew: add PATH
 set -x PATH "$HOMEBREW_PREFIX/bin" "$HOMEBREW_PREFIX/sbin" $PATH

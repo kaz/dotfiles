@@ -2,51 +2,13 @@
   connection: local
 
   tasks:
-    - name: create directory
+    - import_tasks: file.yml
+      vars:
+        homebrew_prefix:
+          x86_64: /usr/local
+          arm64: /opt/homebrew
       tags:
         - file
-      file:
-        state: directory
-        path: ~/{{ item }}
-        mode: 0700
-      loop:
-        - .ssh
-        - .gnupg
-        - .npm/lib
-        - .config/fish
-
-    - name: link files
-      tags:
-        - file
-      file:
-        state: link
-        src: "{{ playbook_dir }}/files/{{ item.src }}"
-        path: ~/{{ item.dest }}
-      loop:
-        - src: profile.sh
-          dest: .zprofile
-        - src: prettierrc.yml
-          dest: .prettierrc.yml
-        - src: npmrc
-          dest: .npmrc
-        - src: tmux.conf
-          dest: .tmux.conf
-        - src: gitconfig
-          dest: .gitconfig
-        - src: gitignore_global
-          dest: .gitignore_global
-        - src: ssh.config
-          dest: .ssh/config
-        - src: ssh.control
-          dest: .gnupg/sshcontrol
-        - src: gpg-agent.conf
-          dest: .gnupg/gpg-agent.conf
-        - src: config.fish
-          dest: .config/fish/config.fish
-        - src: functions
-          dest: .config/fish/functions
-        - src: database
-          dest: .database
 
     - import_tasks: link.yml
       tags:

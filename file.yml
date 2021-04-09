@@ -1,0 +1,40 @@
+- name: create directory
+  tags:
+    - file
+  file:
+    state: directory
+    path: ~/{{ item }}
+    mode: 0700
+  loop:
+    - .ssh
+    - .gnupg
+    - .npm/lib
+    - .config/fish
+
+- name: link files
+  tags:
+    - file
+  template:
+    src: "{{ playbook_dir }}/files/{{ item.src }}"
+    dest: ~/{{ item.dest }}
+  loop:
+    - src: profile.sh
+      dest: .zprofile
+    - src: prettierrc.yml
+      dest: .prettierrc.yml
+    - src: npmrc
+      dest: .npmrc
+    - src: tmux.conf
+      dest: .tmux.conf
+    - src: gitconfig
+      dest: .gitconfig
+    - src: gitignore_global
+      dest: .gitignore_global
+    - src: ssh.config
+      dest: .ssh/config
+    - src: ssh.control
+      dest: .gnupg/sshcontrol
+    - src: gpg-agent.conf
+      dest: .gnupg/gpg-agent.conf
+    - src: config.fish
+      dest: .config/fish/config.fish
