@@ -48,7 +48,6 @@
       - google-japanese-ime
       - homebrew/cask-drivers/displaylink
       - karabiner-elements
-      - openvpn-connect
       - visual-studio-code
       - webex
       - wireshark
