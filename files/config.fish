@@ -19,7 +19,7 @@ end
 # ssh
 if [ -x (command -v gpgconf) ]
 	set SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket)
-	gpgconf --launch gpg-agent
+	gpgconf --launch gpg-agent &
 end
 
 # golang
@@ -64,3 +64,6 @@ set LOCAL_INCLUDE "$HOME/.config/fish/local.fish"
 if [ -r $LOCAL_INCLUDE ]
 	source $LOCAL_INCLUDE
 end
+
+# apply PATH to lanchctl
+sudo launchctl config user path (echo $PATH | tr " " ":") > /dev/null &
