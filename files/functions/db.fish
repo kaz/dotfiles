@@ -6,6 +6,6 @@ function db -a DB
 	end
 
 	pushd $DIR
-	docker-compose $argv[2..-1]
+	docker compose $argv[2..-1]
 	popd
 end
