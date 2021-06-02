@@ -40,7 +40,6 @@
     name:
       - 1password
       - docker
-      - firefox
       - fork
       - google-backup-and-sync
       - google-chrome
