@@ -6,6 +6,7 @@ volumes:
 services:
   mysql:
     image: mysql
+    platform: linux/x86_64
     volumes:
       - mysql:/var/lib/mysql
     ports:
