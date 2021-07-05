@@ -28,7 +28,6 @@
       - protoc-gen-grpc-web
       - python
       - ruby
-      - rustup
       - terraform
       - wget
 

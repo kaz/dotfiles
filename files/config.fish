@@ -1,11 +1,10 @@
+source "$HOME/.prefix.fish"
+
 # disable greeting
 set fish_greeting
 
 # editor
 set -x EDITOR "nano"
-
-# homebrew: determine prefix
-set HOMEBREW_PREFIX "{{ homebrew_prefix[ansible_architecture] }}"
 
 # homebrew: add PATH
 set -x PATH "$HOMEBREW_PREFIX/bin" "$HOMEBREW_PREFIX/sbin" $PATH
