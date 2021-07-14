@@ -40,12 +40,11 @@
       - 1password
       - docker
       - fork
-      - google-backup-and-sync
-      - google-chrome
       - google-cloud-sdk
-      - google-japanese-ime
+      - google-drive
       - homebrew/cask-drivers/displaylink
       - karabiner-elements
+      - microsoft-edge
       - visual-studio-code
       - webex
       - wireshark
