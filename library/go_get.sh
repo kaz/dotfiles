@@ -9,6 +9,6 @@ if [ -x "$GOPATH/bin/$(basename $name)" ]; then
     exit 0
 fi
 
-go get "$name@latest"
+go install "$name@latest"
 
 echo "{\"changed\":true}"
