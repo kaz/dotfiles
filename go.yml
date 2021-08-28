@@ -4,5 +4,6 @@
   go_get:
     name: "{{ item }}"
   loop:
+    - github.com/kaz/bucketrelay
     - google.golang.org/grpc/cmd/protoc-gen-go-grpc
     - google.golang.org/protobuf/cmd/protoc-gen-go

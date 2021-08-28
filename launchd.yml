@@ -1,0 +1,22 @@
+- name: create directory
+  file:
+    state: directory
+    path: ~/{{ item }}
+    mode: 0700
+  loop:
+    - Library/LaunchAgents
+
+- name: deploy job definition
+  template:
+    src: "{{ playbook_dir }}/files/{{ item }}.plist"
+    dest: ~/Library/LaunchAgents/{{ item }}.plist
+  loop:
+    - jp.6715.bucketrelay
+
+- name: enable job
+  community.general.launchd:
+    name: "{{ item }}"
+    enabled: yes
+    state: restarted
+  loop:
+    - jp.6715.bucketrelay
