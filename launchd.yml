@@ -17,6 +17,6 @@
   community.general.launchd:
     name: "{{ item }}"
     enabled: yes
-    state: restarted
+    state: started
   loop:
     - jp.6715.bucketrelay
