@@ -7,6 +7,7 @@ set fish_greeting
 set -x EDITOR "nano"
 
 # homebrew: add PATH
+set HOMEBREW_PREFIX "/opt/homebrew"
 set -x PATH "$HOMEBREW_PREFIX/bin" "$HOMEBREW_PREFIX/sbin" $PATH
 
 # docker

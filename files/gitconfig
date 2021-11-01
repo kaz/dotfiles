@@ -11,4 +11,4 @@
 [commit]
 	gpgsign = true
 [gpg]
-	program = {{ homebrew_prefix[ansible_architecture] }}/bin/gpg
+	program = /opt/homebrew/bin/gpg

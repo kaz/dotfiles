@@ -1,11 +1,6 @@
 #!/bin/sh
 
-if [[ "$(/usr/bin/uname -m)" == "arm64" ]]; then
-	HOMEBREW_PREFIX="/opt/homebrew"
-else
-	HOMEBREW_PREFIX="/usr/local"
-fi
-
+HOMEBREW_PREFIX="/opt/homebrew"
 BREW_BIN="$HOMEBREW_PREFIX/bin/brew"
 PYTHON_BIN="$HOMEBREW_PREFIX/bin/python3"
 

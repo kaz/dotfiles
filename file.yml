@@ -8,20 +8,6 @@
     - .gnupg
     - .config/fish
 
-- name: create files
-  template:
-    src: "{{ playbook_dir }}/files/{{ item.src }}"
-    dest: ~/{{ item.dest }}
-  loop:
-    - src: prefix.fish
-      dest: .prefix.fish
-    - src: profile.zsh
-      dest: .zprofile
-    - src: gitconfig
-      dest: .gitconfig
-    - src: gpg-agent.conf
-      dest: .gnupg/gpg-agent.conf
-
 - name: link files
   file:
     state: link
@@ -30,18 +16,24 @@
     force: yes
     follow: no
   loop:
+    - src: profile.zsh
+      dest: .zprofile
     - src: npmrc
       dest: .npmrc
     - src: tmux.conf
       dest: .tmux.conf
     - src: prettierrc.yml
       dest: .prettierrc.yml
+    - src: gitconfig
+      dest: .gitconfig
     - src: gitignore_global
       dest: .gitignore_global
     - src: ssh.config
       dest: .ssh/config
     - src: ssh.control
       dest: .gnupg/sshcontrol
+    - src: gpg-agent.conf
+      dest: .gnupg/gpg-agent.conf
     - src: config.fish
       dest: .config/fish/config.fish
     - src: database

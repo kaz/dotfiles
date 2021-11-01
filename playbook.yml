@@ -3,10 +3,6 @@
 
   tasks:
     - import_tasks: file.yml
-      vars:
-        homebrew_prefix:
-          x86_64: /usr/local
-          arm64: /opt/homebrew
       tags:
         - file
 
