@@ -1,6 +1,4 @@
 - name: install go packages
-  tags:
-    - go
   go_get:
     name: "{{ item }}"
   loop:

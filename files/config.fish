@@ -1,5 +1,3 @@
-source "$HOME/.prefix.fish"
-
 # disable greeting
 set fish_greeting
 
