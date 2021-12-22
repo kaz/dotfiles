@@ -45,8 +45,6 @@
       - google-japanese-ime
       - homebrew/cask-drivers/displaylink
       - karabiner-elements
-      - microsoft-edge
       - visual-studio-code
-      - webex
-      - wireshark
+      - vivaldi
       - zoom
