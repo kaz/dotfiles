@@ -2,6 +2,7 @@
   go_get:
     name: "{{ item }}"
   loop:
+    - github.com/GoogleCloudPlatform/cloudsql-proxy/cmd/cloud_sql_proxy
     - github.com/kaz/bucketrelay
     - google.golang.org/grpc/cmd/protoc-gen-go-grpc
     - google.golang.org/protobuf/cmd/protoc-gen-go

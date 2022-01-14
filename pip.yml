@@ -7,4 +7,3 @@
       - awscli
       - online-judge-tools
       - pip
-      - yq

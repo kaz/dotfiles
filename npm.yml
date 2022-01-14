@@ -17,3 +17,4 @@
     - npm-check-updates
     - prettier
     - ts-node
+    - yarn

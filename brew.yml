@@ -18,18 +18,24 @@
       - gnupg
       - go
       - graphviz
+      - helm
       - imagemagick
       - jq
       - make
       - mas
       - mtr
+      - mysql-client
       - node
       - protobuf
       - protoc-gen-grpc-web
+      - pulumi
+      - pulumi/tap/crd2pulumi
+      - pulumi/tap/kube2pulumi
       - python
       - ruby
       - terraform
       - wget
+      - yq
 
 - name: install brew cask packages
   tags:
@@ -40,11 +46,11 @@
       - 1password
       - docker
       - fork
+      - google-chrome
       - google-cloud-sdk
       - google-drive
       - google-japanese-ime
       - homebrew/cask-drivers/displaylink
       - karabiner-elements
       - visual-studio-code
-      - vivaldi
       - zoom

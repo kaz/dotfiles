@@ -32,10 +32,10 @@ if [ -d $RUBY_PATH ]
 	set -x PATH $RUBY_PATH $PATH
 end
 
-# cargo
-set CARGO_PATH "$HOME/.cargo/bin"
-if [ -d $CARGO_PATH ]
-	set -x PATH $CARGO_PATH $PATH
+# mysql-client
+set MYSQL_CLIENT_PATH "$HOMEBREW_PREFIX/opt/mysql-client/bin"
+if [ -d $MYSQL_CLIENT_PATH ]
+	set -x PATH $MYSQL_CLIENT_PATH $PATH
 end
 
 # npm
