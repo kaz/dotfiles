@@ -43,7 +43,6 @@
   homebrew_cask:
     state: latest
     name:
-      - 1password
       - docker
       - fork
       - google-chrome
@@ -51,6 +50,7 @@
       - google-drive
       - google-japanese-ime
       - homebrew/cask-drivers/displaylink
+      - homebrew/cask-versions/1password-beta
       - karabiner-elements
       - visual-studio-code
       - zoom
