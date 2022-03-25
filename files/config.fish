@@ -8,16 +8,13 @@ set -x EDITOR "nano"
 set HOMEBREW_PREFIX "/opt/homebrew"
 set -x PATH "$HOMEBREW_PREFIX/bin" "$HOMEBREW_PREFIX/sbin" $PATH
 
+# ssh
+set -x SSH_AUTH_SOCK "$HOME/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+
 # docker
 if [ -x (command -v docker) ]
 	set -x DOCKER_BUILDKIT 1
 	set -x COMPOSE_DOCKER_CLI_BUILD 1
-end
-
-# ssh
-if [ -x (command -v gpgconf) ]
-	set SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket)
-	gpgconf --launch gpg-agent &
 end
 
 # golang
