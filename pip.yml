@@ -5,5 +5,4 @@
     name:
       - ansible
       - awscli
-      - online-judge-tools
       - pip

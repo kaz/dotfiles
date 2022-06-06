@@ -3,5 +3,6 @@
     state: latest
     name: "{{ item }}"
   loop:
-    - Magnet
+    - GoodNotes 5
     - Microsoft Remote Desktop
+    - Tailscale
