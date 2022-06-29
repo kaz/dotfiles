@@ -54,6 +54,11 @@ if [ -r $GCLOUD_INCLUDE ]
 	source $GCLOUD_INCLUDE
 end
 
+# gke-gcloud-auth-plugin
+if [ -x (command -v gke-gcloud-auth-plugin) ]
+	set -x USE_GKE_GCLOUD_AUTH_PLUGIN True
+end
+
 # load machine specific configuration
 set LOCAL_INCLUDE "$HOME/.config/fish/local.fish"
 if [ -r $LOCAL_INCLUDE ]
