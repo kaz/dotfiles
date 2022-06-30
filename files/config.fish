@@ -67,3 +67,8 @@ end
 
 # apply PATH to lanchctl
 sudo launchctl config user path (echo $PATH | tr " " ":") > /dev/null &
+
+# backup history after each command
+function __postexec_backup_history --on-event fish_postexec
+	backup_history &
+end
