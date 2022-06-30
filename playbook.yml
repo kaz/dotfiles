@@ -6,6 +6,14 @@
       tags:
         - file
 
+    - import_tasks: fish.yml
+      tags:
+        - fish
+
+    - import_tasks: sudoers.yml
+      tags:
+        - sudoers
+
     - import_tasks: brew.yml
 
     - import_tasks: mas.yml
@@ -27,7 +35,3 @@
     - import_tasks: gcloud.yml
       tags:
         - gcloud
-
-    - import_tasks: sudoers.yml
-      tags:
-        - sudoers
