@@ -7,6 +7,7 @@
     - .ssh
     - .gnupg
     - .config/fish
+    - Library/Mobile Documents/com~apple~CloudDocs/fish
 
 - name: link files
   file:
@@ -38,3 +39,14 @@
       dest: .database
     - src: functions
       dest: .config/fish/functions
+
+- name: link additional files
+  file:
+    state: link
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+    force: yes
+    follow: no
+  loop:
+    - src: ~/Library/Mobile Documents/com~apple~CloudDocs/fish
+      dest: ~/.local/share/fish
