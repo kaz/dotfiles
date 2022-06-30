@@ -28,10 +28,6 @@
       tags:
         - gcloud
 
-    - import_tasks: launchd.yml
-      tags:
-        - launchd
-
     - import_tasks: sudoers.yml
       tags:
         - sudoers

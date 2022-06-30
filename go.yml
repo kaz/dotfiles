@@ -1,5 +1,4 @@
 - name: install go packages
   go_get:
     name: "{{ item }}"
-  loop:
-    - github.com/kaz/bucketrelay
+  loop: []
