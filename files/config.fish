@@ -6,7 +6,7 @@ set -x EDITOR "nano"
 
 # homebrew: add PATH
 set HOMEBREW_PREFIX "/opt/homebrew"
-set -x PATH "$HOMEBREW_PREFIX/bin" "$HOMEBREW_PREFIX/sbin" $PATH
+fish_add_path -P "$HOMEBREW_PREFIX/bin" "$HOMEBREW_PREFIX/sbin"
 
 # ssh
 set -x SSH_AUTH_SOCK "$HOME/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
@@ -20,25 +20,25 @@ end
 # golang
 if [ -x (command -v go) ]
 	set -x GOPATH "$HOME/.go"
-	set -x PATH "$GOPATH/bin" $PATH
+	fish_add_path -P "$GOPATH/bin"
 end
 
 # ruby
 set RUBY_PATH "$HOMEBREW_PREFIX/opt/ruby/bin"
 if [ -d $RUBY_PATH ]
-	set -x PATH $RUBY_PATH $PATH
+	fish_add_path -P $RUBY_PATH
 end
 
 # mysql-client
 set MYSQL_CLIENT_PATH "$HOMEBREW_PREFIX/opt/mysql-client/bin"
 if [ -d $MYSQL_CLIENT_PATH ]
-	set -x PATH $MYSQL_CLIENT_PATH $PATH
+	fish_add_path -P $MYSQL_CLIENT_PATH
 end
 
 # npm
 set NPM_PATH "$HOME/.npm/bin"
 if [ -d $NPM_PATH ]
-	set -x PATH $NPM_PATH $PATH
+	fish_add_path -P $NPM_PATH
 end
 
 # python
