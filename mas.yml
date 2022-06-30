@@ -1,8 +1,8 @@
 - name: install mas packages
   mas:
     state: latest
-    name: "{{ item }}"
+    id: "{{ item }}"
   loop:
-    - GoodNotes 5
-    - Microsoft Remote Desktop
-    - Tailscale
+    - 1295203466 # Microsoft Remote Desktop
+    - 1444383602 # GoodNotes 5
+    - 1475387142 # Tailscale
