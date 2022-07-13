@@ -1,5 +1,4 @@
 function backup_history
-	history merge
 	history save
 
 	set BACKUP /tmp/fish_history.(date +%s).zstd
