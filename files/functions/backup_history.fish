@@ -1,7 +1,7 @@
 function backup_history
 	history save
 
-	set BACKUP /tmp/fish_history.(date +%s).zstd
+	set BACKUP /tmp/fish_history.zstd
 	zstdmt -q -f -o "$BACKUP" "$HOME/.local/share/fish/fish_history"
 
 	__backup_history_in_dir "$BACKUP" "$HOME/Library/Mobile Documents/com~apple~CloudDocs/fish_history_backup"
@@ -21,6 +21,5 @@ function __backup_history_in_dir -a BACKUP DIR
 		mkdir -p "$DIR"
 	end
 
-	cp "$BACKUP" "$DIR"
-	ls -t "$DIR" | tail -n +1001 | xargs -I {} rm "$DIR/{}"
+	cp "$BACKUP" "$DIR/fish_history."(hostname)".zstd"
 end
