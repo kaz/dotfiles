@@ -5,7 +5,7 @@ volumes:
 
 services:
   mysql:
-    image: mariadb
+    image: mysql
     volumes:
       - mysql:/var/lib/mysql
     ports:
