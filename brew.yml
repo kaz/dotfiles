@@ -22,6 +22,7 @@
       - graphviz
       - imagemagick
       - jq
+      - libpq
       - make
       - mas
       - mtr

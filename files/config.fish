@@ -35,6 +35,12 @@ if [ -d $MYSQL_CLIENT_PATH ]
 	fish_add_path -P $MYSQL_CLIENT_PATH
 end
 
+# libpq
+set LIBPQ_PATH "$HOMEBREW_PREFIX/opt/libpq/bin"
+if [ -d $LIBPQ_PATH ]
+	fish_add_path -P $LIBPQ_PATH
+end
+
 # npm
 set NPM_PATH "$HOME/.npm/bin"
 if [ -d $NPM_PATH ]
