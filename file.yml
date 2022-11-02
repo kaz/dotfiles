@@ -7,6 +7,7 @@
     - .ssh
     - .gnupg
     - .config/fish
+    - .local/share
 
 - name: link files
   file:
