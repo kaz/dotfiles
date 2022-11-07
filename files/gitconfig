@@ -7,8 +7,10 @@
 [user]
 	name = Kazuki Sawada
 	email = kazuki@6715.jp
-	signingkey = CFCB1F563F8149B8CE23AD56105FFD70FF15272E
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAcClmsOHXIZ0p0RkgXMMTIQDhvmfoadSUDWGJGj0LLg
 [commit]
 	gpgsign = true
 [gpg]
-	program = /opt/homebrew/bin/gpg
+	format = ssh
+[gpg "ssh"]
+	program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"

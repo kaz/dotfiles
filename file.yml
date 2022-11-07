@@ -5,7 +5,6 @@
     mode: 0700
   loop:
     - .ssh
-    - .gnupg
     - .config/fish
     - .local/share
 
@@ -31,8 +30,6 @@
       dest: .gitignore_global
     - src: ssh.config
       dest: .ssh/config
-    - src: gpg-agent.conf
-      dest: .gnupg/gpg-agent.conf
     - src: config.fish
       dest: .config/fish/config.fish
     - src: database

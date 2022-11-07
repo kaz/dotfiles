@@ -17,7 +17,6 @@
       - fish
       - git
       - git-lfs
-      - gnupg
       - go
       - graphviz
       - imagemagick
