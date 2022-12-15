@@ -10,10 +10,9 @@
     global: yes
     name: "{{ item }}"
   loop:
-    - "@cloudflare/wrangler"
     - "@protobuf-ts/plugin"
     - "@trivago/prettier-plugin-sort-imports"
-    - firebase-tools
+    - eas-cli
     - npm-check-updates
     - prettier
     - ts-node
