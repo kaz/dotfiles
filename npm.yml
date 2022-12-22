@@ -10,10 +10,10 @@
     global: yes
     name: "{{ item }}"
   loop:
-    - "@protobuf-ts/plugin"
     - "@trivago/prettier-plugin-sort-imports"
     - eas-cli
     - npm-check-updates
+    - pnpm
     - prettier
     - ts-node
     - yarn

@@ -2,14 +2,14 @@
 
 HOMEBREW_PREFIX="/opt/homebrew"
 BREW_BIN="$HOMEBREW_PREFIX/bin/brew"
-PYTHON_BIN="$HOMEBREW_PREFIX/bin/python3"
+PYTHON_BIN="$HOMEBREW_PREFIX/bin/python3.11"
 
 if [ ! -x $BREW_BIN ]; then
 	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
 if [ ! -x $PYTHON_BIN ]; then
-	$BREW_BIN install python
+	$BREW_BIN install python@3.11
 fi
 
 if [ ! -r ~/.venv/bin/activate ]; then
