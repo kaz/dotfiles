@@ -1,11 +1,9 @@
-version: "3"
-
 volumes:
   elasticsearch:
 
 services:
   elasticsearch:
-    image: elasticsearch:7.12.1
+    image: elasticsearch:8.6.0
     volumes:
       - elasticsearch:/usr/share/elasticsearch/data
     ports:
@@ -15,6 +13,6 @@ services:
       bootstrap.memory_lock: "true"
       ES_JAVA_OPTS: -Xms512m -Xms512m
   kibana:
-    image: kibana:7.9.3
+    image: kibana:8.6.0
     ports:
-      - 18003:5601
+      - 50301:5601
