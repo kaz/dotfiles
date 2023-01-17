@@ -11,7 +11,6 @@
   homebrew:
     state: latest
     name:
-      - asciidoctor
       - beeftornado/rmtree/brew-rmtree
       - cloudflared
       - cocoapods
