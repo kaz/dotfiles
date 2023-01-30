@@ -14,6 +14,10 @@
       tags:
         - sudoers
 
+    - import_tasks: defaults.yml
+      tags:
+        - defaults
+
     - import_tasks: brew.yml
 
     - import_tasks: mas.yml
