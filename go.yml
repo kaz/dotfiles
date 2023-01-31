@@ -1,4 +1,5 @@
 - name: install go packages
   go_get:
     name: "{{ item }}"
-  loop: []
+  loop:
+    - github.com/go-task/task/v3/cmd/task
