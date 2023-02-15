@@ -65,6 +65,19 @@ if [ -x (command -v gke-gcloud-auth-plugin) ]
 	set -x USE_GKE_GCLOUD_AUTH_PLUGIN True
 end
 
+# Android SDK
+set ANDROID_HOME "$HOME/Library/Android/sdk"
+if [ -d $ANDROID_HOME ]
+	set -x ANDROID_HOME $ANDROID_HOME
+	fish_add_path "$ANDROID_HOME/platform-tools"
+end
+
+# Android Studio embedded JDK
+set JAVA_HOME "/Applications/Android Studio.app/Contents/jbr/Contents/Home"
+if [ -d $JAVA_HOME ]
+	set -x JAVA_HOME $JAVA_HOME
+end
+
 # load machine specific configuration
 set LOCAL_INCLUDE "$HOME/.config/fish/local.fish"
 if [ -r $LOCAL_INCLUDE ]

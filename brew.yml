@@ -39,6 +39,7 @@
     state: latest
     name:
       - 1password
+      - android-studio
       - docker
       - fork
       - google-chrome
