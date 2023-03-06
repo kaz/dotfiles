@@ -4,5 +4,4 @@
     virtualenv: ~/.venv
     name:
       - ansible
-      - awscli
       - pip

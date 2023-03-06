@@ -11,6 +11,7 @@
   homebrew:
     state: latest
     name:
+      - awscli
       - beeftornado/rmtree/brew-rmtree
       - cloudflared
       - cocoapods
