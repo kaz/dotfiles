@@ -1,5 +1,5 @@
 - name: set sudoers
-  become: yes
+  become: true
   copy:
     dest: /etc/sudoers.d/{{ ansible_user_id }}
     content: |

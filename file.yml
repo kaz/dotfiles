@@ -13,8 +13,8 @@
     state: link
     src: "{{ playbook_dir }}/files/{{ item.src }}"
     dest: ~/{{ item.dest }}
-    force: yes
-    follow: no
+    force: true
+    follow: false
   loop:
     - src: profile.zsh
       dest: .zprofile

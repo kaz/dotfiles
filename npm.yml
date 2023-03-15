@@ -7,7 +7,7 @@
 - name: install npm packages
   npm:
     state: latest
-    global: yes
+    global: true
     name: "{{ item }}"
   loop:
     - "@trivago/prettier-plugin-sort-imports"
