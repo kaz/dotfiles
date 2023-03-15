@@ -1,0 +1,17 @@
+- name: install brew cask packages
+  homebrew_cask:
+    state: latest
+    name:
+      - 1password
+      - android-studio
+      - docker
+      - fork
+      - google-chrome
+      - google-cloud-sdk
+      - google-drive
+      - google-japanese-ime
+      - karabiner-elements
+      - microsoft-office
+      - tableplus
+      - visual-studio-code
+      - zoom

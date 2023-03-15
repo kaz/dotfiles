@@ -1,5 +1,7 @@
 - name: install go packages
-  go_get:
+  go_install:
     name: "{{ item }}"
   loop:
     - github.com/go-task/task/v3/cmd/task
+    - github.com/hashicorp/terraform
+    - github.com/mikefarah/yq/v4

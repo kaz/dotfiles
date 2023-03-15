@@ -2,40 +2,40 @@
   connection: local
 
   tasks:
+    - import_tasks: defaults.yml
+      tags:
+        - defaults
     - import_tasks: file.yml
       tags:
         - file
-
     - import_tasks: fish.yml
       tags:
         - fish
-
     - import_tasks: sudoers.yml
       tags:
         - sudoers
 
-    - import_tasks: defaults.yml
-      tags:
-        - defaults
-
     - import_tasks: brew.yml
-
-    - import_tasks: mas.yml
       tags:
-        - mas
-
-    - import_tasks: pip.yml
+        - brew
+    - import_tasks: cask.yml
       tags:
-        - pip
-
-    - import_tasks: npm.yml
-      tags:
-        - npm
-
-    - import_tasks: go.yml
-      tags:
-        - go
-
+        - cask
     - import_tasks: gcloud.yml
       tags:
         - gcloud
+    - import_tasks: gem.yml
+      tags:
+        - gem
+    - import_tasks: go.yml
+      tags:
+        - go
+    - import_tasks: mas.yml
+      tags:
+        - mas
+    - import_tasks: npm.yml
+      tags:
+        - npm
+    - import_tasks: pip.yml
+      tags:
+        - pip

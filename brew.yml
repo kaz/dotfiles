@@ -1,25 +1,18 @@
 - name: update homebrew itself
-  tags:
-    - brew
-    - cask
   homebrew:
     update_homebrew: yes
 
 - name: install brew packages
-  tags:
-    - brew
   homebrew:
     state: latest
     name:
       - awscli
       - beeftornado/rmtree/brew-rmtree
       - cloudflared
-      - cocoapods
       - fish
       - git
       - git-lfs
       - go
-      - graphviz
       - imagemagick
       - jq
       - libpq
@@ -28,26 +21,5 @@
       - mtr
       - mysql-client
       - node
-      - pulumi
-      - terraform
+      - ruby
       - wget
-      - yq
-
-- name: install brew cask packages
-  tags:
-    - cask
-  homebrew_cask:
-    state: latest
-    name:
-      - 1password
-      - android-studio
-      - docker
-      - fork
-      - google-chrome
-      - google-cloud-sdk
-      - google-drive
-      - google-japanese-ime
-      - homebrew/cask-drivers/displaylink
-      - karabiner-elements
-      - visual-studio-code
-      - zoom

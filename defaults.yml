@@ -1,5 +1,5 @@
 - name: configure NSGlobalDomain
-  community.general.osx_defaults:
+  osx_defaults:
     key: "{{ item.key }}"
     type: "{{ item.type }}"
     value: "{{ item.value }}"
@@ -12,7 +12,7 @@
       value: 25
 
 - name: configure com.apple.dock
-  community.general.osx_defaults:
+  osx_defaults:
     domain: com.apple.dock
     key: "{{ item.key }}"
     type: "{{ item.type }}"
@@ -35,7 +35,7 @@
       value: 128
 
 - name: configure com.apple.desktopservices
-  community.general.osx_defaults:
+  osx_defaults:
     domain: com.apple.dock
     key: "{{ item.key }}"
     type: "{{ item.type }}"
