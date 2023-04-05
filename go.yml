@@ -4,4 +4,6 @@
   loop:
     - github.com/go-task/task/v3/cmd/task
     - github.com/hashicorp/terraform
+    - github.com/jpki/myna
+    - github.com/kyleconroy/sqlc/cmd/sqlc
     - github.com/mikefarah/yq/v4
