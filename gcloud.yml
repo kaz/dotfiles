@@ -3,5 +3,4 @@
     name: "{{ item }}"
   loop:
     - beta
-    - cloud_sql_proxy
     - gke-gcloud-auth-plugin

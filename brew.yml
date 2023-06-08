@@ -21,5 +21,6 @@
       - mtr
       - mysql-client
       - node
+      - p7zip
       - ruby
       - wget
