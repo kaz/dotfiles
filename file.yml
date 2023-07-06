@@ -7,6 +7,7 @@
     - .ssh
     - .config/fish
     - .local/share
+    - Library/KeyBindings
 
 - name: link files
   file:
@@ -36,3 +37,5 @@
       dest: .database
     - src: functions
       dest: .config/fish/functions
+    - src: DefaultKeyBinding.dict
+      dest: Library/KeyBindings/DefaultKeyBinding.dict
