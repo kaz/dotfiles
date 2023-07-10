@@ -4,12 +4,12 @@
     name:
       - 1password
       - android-studio
-      - atok
       - docker
       - fork
       - google-chrome
       - google-cloud-sdk
       - google-drive
+      - google-japanese-ime
       - karabiner-elements
       - microsoft-office
       - tableplus
