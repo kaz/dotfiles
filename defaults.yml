@@ -18,9 +18,6 @@
     type: "{{ item.type }}"
     value: "{{ item.value }}"
   loop:
-    - key: autohide
-      type: bool
-      value: true
     - key: show-recents
       type: bool
       value: false
@@ -33,6 +30,12 @@
     - key: largesize
       type: float
       value: 128
+    - key: magnification
+      type: bool
+      value: true
+    - key: autohide
+      type: bool
+      value: true
 
 - name: configure com.apple.desktopservices
   osx_defaults:
