@@ -20,8 +20,6 @@
       dest: .zprofile
     - src: npmrc
       dest: .npmrc
-    - src: tmux.conf
-      dest: .tmux.conf
     - src: prettierrc.yml
       dest: .prettierrc.yml
     - src: gitconfig
