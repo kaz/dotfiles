@@ -1,13 +1,15 @@
+[user]
+	name = Kazuki Sawada
+	email = kazuki@6715.jp
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAcClmsOHXIZ0p0RkgXMMTIQDhvmfoadSUDWGJGj0LLg
 [core]
 	autocrlf = input
 	quotepath = false
 	excludesfile = ~/.gitignore_global
 [init]
 	defaultBranch = main
-[user]
-	name = Kazuki Sawada
-	email = kazuki@6715.jp
-	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAcClmsOHXIZ0p0RkgXMMTIQDhvmfoadSUDWGJGj0LLg
+[push]
+	autoSetupRemote = true
 [commit]
 	gpgsign = true
 [gpg]
