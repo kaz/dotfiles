@@ -6,6 +6,7 @@
   loop:
     - .ssh
     - .config/fish
+    - .config/karabiner/assets/complex_modifications
     - .local/share
 
 - name: link files
@@ -30,6 +31,8 @@
       dest: .ssh/config
     - src: config.fish
       dest: .config/fish/config.fish
+    - src: my-hhkb-keymap.json
+      dest: .config/karabiner/assets/complex_modifications/my-hhkb-keymap.json
     - src: database
       dest: .database
     - src: functions

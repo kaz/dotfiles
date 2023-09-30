@@ -1,0 +1,140 @@
+{
+	"title": "My HHKB Keymap",
+	"rules": [
+		{
+			"description": "Change caps_lock to left_control",
+			"manipulators": [
+				{
+					"from": {
+						"key_code": "caps_lock"
+					},
+					"to": [
+						{
+							"key_code": "left_control"
+						}
+					],
+					"type": "basic",
+					"conditions": [
+						{
+							"type": "device_if",
+							"identifiers": [
+								{
+									"is_keyboard": true,
+									"vendor_id": 1278
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "Change grave_accent_and_tilde to left_gui",
+			"manipulators": [
+				{
+					"from": {
+						"key_code": "grave_accent_and_tilde"
+					},
+					"to": [
+						{
+							"key_code": "left_gui"
+						}
+					],
+					"type": "basic",
+					"conditions": [
+						{
+							"type": "device_if",
+							"identifiers": [
+								{
+									"is_keyboard": true,
+									"vendor_id": 1278
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "Change japanese_pc_nfer to japanese_eisuu",
+			"manipulators": [
+				{
+					"from": {
+						"key_code": "japanese_pc_nfer"
+					},
+					"to": [
+						{
+							"key_code": "japanese_eisuu"
+						}
+					],
+					"type": "basic",
+					"conditions": [
+						{
+							"type": "device_if",
+							"identifiers": [
+								{
+									"is_keyboard": true,
+									"vendor_id": 1278
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "Change japanese_pc_xfer to japanese_kana",
+			"manipulators": [
+				{
+					"from": {
+						"key_code": "japanese_pc_xfer"
+					},
+					"to": [
+						{
+							"key_code": "japanese_kana"
+						}
+					],
+					"type": "basic",
+					"conditions": [
+						{
+							"type": "device_if",
+							"identifiers": [
+								{
+									"is_keyboard": true,
+									"vendor_id": 1278
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "Change right_option to right_command",
+			"manipulators": [
+				{
+					"from": {
+						"key_code": "right_option"
+					},
+					"to": [
+						{
+							"key_code": "right_command"
+						}
+					],
+					"type": "basic",
+					"conditions": [
+						{
+							"type": "device_if",
+							"identifiers": [
+								{
+									"is_keyboard": true,
+									"vendor_id": 1278
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}
