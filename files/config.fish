@@ -84,6 +84,11 @@ if [ -r $LOCAL_INCLUDE ]
 	source $LOCAL_INCLUDE
 end
 
+# aqua
+if [ -x (command -v aqua) ]
+	fish_add_path (aqua root-dir)/bin
+end
+
 # apply PATH to lanchctl
 sudo launchctl config user path (echo $PATH | tr " " ":") > /dev/null &
 
