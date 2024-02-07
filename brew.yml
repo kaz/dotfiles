@@ -22,5 +22,6 @@
       - mysql-client
       - node
       - p7zip
+      - rclone
       - ruby
       - wget
