@@ -36,6 +36,9 @@
     - key: autohide
       type: bool
       value: true
+    - key: mru-spaces
+      type: bool
+      value: false
 
 - name: configure com.apple.desktopservices
   osx_defaults:
