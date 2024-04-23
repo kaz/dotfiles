@@ -2,49 +2,49 @@
 set fish_greeting
 
 # editor
-set -x EDITOR "nano"
+set -gx EDITOR "nano"
 
 # homebrew: add PATH
 set HOMEBREW_PREFIX "/opt/homebrew"
-fish_add_path "$HOMEBREW_PREFIX/bin" "$HOMEBREW_PREFIX/sbin"
+fish_add_path -g "$HOMEBREW_PREFIX/bin" "$HOMEBREW_PREFIX/sbin"
 
 # ssh
-set -x SSH_AUTH_SOCK "$HOME/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+set -gx SSH_AUTH_SOCK "$HOME/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
 
 # docker
 if [ -x (command -v docker) ]
-	set -x DOCKER_BUILDKIT 1
-	set -x COMPOSE_DOCKER_CLI_BUILD 1
+	set -gx DOCKER_BUILDKIT 1
+	set -gx COMPOSE_DOCKER_CLI_BUILD 1
 end
 
 # golang
 if [ -x (command -v go) ]
-	set -x GOPATH "$HOME/.go"
-	fish_add_path "$GOPATH/bin"
+	set -gx GOPATH "$HOME/.go"
+	fish_add_path -g "$GOPATH/bin"
 end
 
 # ruby
 set RUBY_PATH "$HOMEBREW_PREFIX/opt/ruby/bin"
 if [ -d $RUBY_PATH ]
-	fish_add_path $RUBY_PATH
+	fish_add_path -g $RUBY_PATH
 end
 
 # mysql-client
 set MYSQL_CLIENT_PATH "$HOMEBREW_PREFIX/opt/mysql-client/bin"
 if [ -d $MYSQL_CLIENT_PATH ]
-	fish_add_path $MYSQL_CLIENT_PATH
+	fish_add_path -g $MYSQL_CLIENT_PATH
 end
 
 # libpq
 set LIBPQ_PATH "$HOMEBREW_PREFIX/opt/libpq/bin"
 if [ -d $LIBPQ_PATH ]
-	fish_add_path $LIBPQ_PATH
+	fish_add_path -g $LIBPQ_PATH
 end
 
 # npm
 set NPM_PATH "$HOME/.npm/bin"
 if [ -d $NPM_PATH ]
-	fish_add_path $NPM_PATH
+	fish_add_path -g $NPM_PATH
 end
 
 # python
@@ -62,31 +62,31 @@ end
 
 # gke-gcloud-auth-plugin
 if [ -x (command -v gke-gcloud-auth-plugin) ]
-	set -x USE_GKE_GCLOUD_AUTH_PLUGIN True
+	set -gx USE_GKE_GCLOUD_AUTH_PLUGIN True
 end
 
 # Android SDK
 set ANDROID_HOME "$HOME/Library/Android/sdk"
 if [ -d $ANDROID_HOME ]
-	set -x ANDROID_HOME $ANDROID_HOME
-	fish_add_path "$ANDROID_HOME/platform-tools"
+	set -gx ANDROID_HOME $ANDROID_HOME
+	fish_add_path -g "$ANDROID_HOME/platform-tools"
 end
 
 # Android Studio embedded JDK
 set JAVA_HOME "/Applications/Android Studio.app/Contents/jbr/Contents/Home"
 if [ -d $JAVA_HOME ]
-	set -x JAVA_HOME $JAVA_HOME
+	set -gx JAVA_HOME $JAVA_HOME
+end
+
+# aqua
+if [ -x (command -v aqua) ]
+	fish_add_path -g (aqua root-dir)/bin
 end
 
 # load machine specific configuration
 set LOCAL_INCLUDE "$HOME/.config/fish/local.fish"
 if [ -r $LOCAL_INCLUDE ]
 	source $LOCAL_INCLUDE
-end
-
-# aqua
-if [ -x (command -v aqua) ]
-	fish_add_path (aqua root-dir)/bin
 end
 
 # apply PATH to lanchctl
