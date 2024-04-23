@@ -7,7 +7,6 @@
     state: latest
     name:
       - awscli
-      - beeftornado/rmtree/brew-rmtree
       - cloudflared
       - fish
       - git
@@ -25,3 +24,12 @@
       - rclone
       - ruby
       - wget
+
+- name: link brew packages
+  homebrew:
+    state: linked
+    install_options:
+      - force
+    name:
+      - libpq
+      - mysql-client

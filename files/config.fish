@@ -17,7 +17,7 @@ if [ -x (command -v docker) ]
 	set -gx COMPOSE_DOCKER_CLI_BUILD 1
 end
 
-# golang
+# go
 if [ -x (command -v go) ]
 	set -gx GOPATH "$HOME/.go"
 	fish_add_path -g "$GOPATH/bin"
@@ -27,18 +27,6 @@ end
 set RUBY_PATH "$HOMEBREW_PREFIX/opt/ruby/bin"
 if [ -d $RUBY_PATH ]
 	fish_add_path -g $RUBY_PATH
-end
-
-# mysql-client
-set MYSQL_CLIENT_PATH "$HOMEBREW_PREFIX/opt/mysql-client/bin"
-if [ -d $MYSQL_CLIENT_PATH ]
-	fish_add_path -g $MYSQL_CLIENT_PATH
-end
-
-# libpq
-set LIBPQ_PATH "$HOMEBREW_PREFIX/opt/libpq/bin"
-if [ -d $LIBPQ_PATH ]
-	fish_add_path -g $LIBPQ_PATH
 end
 
 # npm
