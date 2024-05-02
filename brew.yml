@@ -8,6 +8,7 @@
     name:
       - awscli
       - cloudflared
+      - corepack
       - fish
       - git
       - git-lfs
@@ -21,7 +22,6 @@
       - mysql-client
       - node
       - p7zip
-      - rclone
       - ruby
       - wget
 

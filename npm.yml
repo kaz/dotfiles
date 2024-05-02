@@ -13,7 +13,5 @@
     - "@trivago/prettier-plugin-sort-imports"
     - eas-cli
     - npm-check-updates
-    - pnpm
     - prettier
     - ts-node
-    - yarn
