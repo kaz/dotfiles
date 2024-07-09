@@ -5,6 +5,7 @@
     mode: 0700
   loop:
     - .ssh
+    - .config/aquaproj-aqua
     - .config/fish
     - .config/karabiner/assets/complex_modifications
     - .local/share
@@ -29,6 +30,8 @@
       dest: .gitignore_global
     - src: ssh.config
       dest: .ssh/config
+    - src: aqua.yaml
+      dest: .config/aquaproj-aqua/aqua.yaml
     - src: config.fish
       dest: .config/fish/config.fish
     - src: my-hhkb-keymap.json
