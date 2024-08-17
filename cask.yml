@@ -4,6 +4,7 @@
     name:
       - 1password
       - android-studio
+      - cloudflare-warp
       - docker
       - fork
       - google-chrome
