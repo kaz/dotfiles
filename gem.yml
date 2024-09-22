@@ -1,7 +1,0 @@
-- name: install gem packages
-  gem:
-    state: latest
-    user_install: false
-    name: "{{ item }}"
-  loop:
-    - cocoapods

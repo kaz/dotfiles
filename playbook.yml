@@ -2,9 +2,6 @@
   connection: local
 
   tasks:
-    - import_tasks: defaults.yml
-      tags:
-        - defaults
     - import_tasks: file.yml
       tags:
         - file
@@ -14,6 +11,12 @@
     - import_tasks: sudoers.yml
       tags:
         - sudoers
+    - import_tasks: defaults.yml
+      tags:
+        - defaults
+    - import_tasks: rosetta.yml
+      tags:
+        - rosetta
     - import_tasks: brew.yml
       tags:
         - brew
@@ -26,9 +29,6 @@
     - import_tasks: gcloud.yml
       tags:
         - gcloud
-    - import_tasks: gem.yml
-      tags:
-        - gem
     - import_tasks: mas.yml
       tags:
         - mas
