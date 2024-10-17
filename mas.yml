@@ -3,4 +3,5 @@
     state: latest
     id: "{{ item }}"
   loop:
+    - 441258766 # Magnet
     - 1444383602 # GoodNotes
