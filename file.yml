@@ -5,10 +5,11 @@
     mode: 0700
   loop:
     - .ssh
-    - .config/aquaproj-aqua
-    - .config/fish
-    - .config/karabiner/assets/complex_modifications
     - .local/share
+    - .config/fish
+    - .config/aquaproj-aqua
+    - .config/karabiner/assets/complex_modifications
+    - Library/KeyBindings
 
 - name: link files
   file:
@@ -36,6 +37,8 @@
       dest: .config/fish/config.fish
     - src: my-hhkb-keymap.json
       dest: .config/karabiner/assets/complex_modifications/my-hhkb-keymap.json
+    - src: DefaultKeyBinding.dict
+      dest: Library/KeyBindings/DefaultKeyBinding.dict
     - src: database
       dest: .database
     - src: functions
