@@ -14,7 +14,6 @@
     name:
       - aquaproj/aqua/aqua
       - beeftornado/rmtree/brew-rmtree
-      - corepack
       - fish
       - git
       - imagemagick
@@ -23,6 +22,7 @@
       - mas
       - mtr
       - mysql-client
+      - node
       - p7zip
       - ruby
       - wget
