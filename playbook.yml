@@ -1,6 +1,5 @@
 - hosts: localhost
   connection: local
-
   tasks:
     - import_tasks: file.yml
       tags:
@@ -23,21 +22,18 @@
     - import_tasks: brew.yml
       tags:
         - brew
-    - import_tasks: cask.yml
-      tags:
-        - cask
     - import_tasks: aquaproj-aqua.yml
       tags:
         - aqua
-    - import_tasks: gcloud.yml
-      tags:
-        - gcloud
-    - import_tasks: mas.yml
-      tags:
-        - mas
     - import_tasks: npm.yml
       tags:
         - npm
-    - import_tasks: pip.yml
+    - import_tasks: gcloud.yml
       tags:
-        - pip
+        - gcloud
+    - import_tasks: cask.yml
+      tags:
+        - cask
+    - import_tasks: mas.yml
+      tags:
+        - mas
