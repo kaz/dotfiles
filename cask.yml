@@ -6,6 +6,7 @@
       - android-studio
       - cloudflare-warp
       - docker
+      - flutter
       - fork
       - google-chrome
       - google-cloud-sdk
