@@ -25,6 +25,9 @@
     - import_tasks: aquaproj-aqua.yml
       tags:
         - aqua
+    - import_tasks: python.yml
+      tags:
+        - python
     - import_tasks: npm.yml
       tags:
         - npm
