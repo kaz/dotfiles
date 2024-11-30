@@ -4,6 +4,7 @@
     name:
       - 1password
       - android-studio
+      - atok
       - cloudflare-warp
       - docker
       - flutter
@@ -11,7 +12,6 @@
       - google-chrome
       - google-cloud-sdk
       - google-drive
-      - google-japanese-ime
       - karabiner-elements
       - microsoft-office
       - tableplus
