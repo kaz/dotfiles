@@ -7,6 +7,7 @@
     - .ssh
     - .local/share
     - .config/fish
+    - .config/ghostty
     - .config/aquaproj-aqua
     - .config/karabiner/assets/complex_modifications
     - Library/KeyBindings
@@ -35,6 +36,8 @@
       dest: .config/aquaproj-aqua/aqua.yaml
     - src: config.fish
       dest: .config/fish/config.fish
+    - src: ghostty.config
+      dest: .config/ghostty/config
     - src: my-hhkb-keymap.json
       dest: .config/karabiner/assets/complex_modifications/my-hhkb-keymap.json
     - src: DefaultKeyBinding.dict

@@ -4,16 +4,17 @@
     name:
       - 1password
       - android-studio
-      - atok
       - cloudflare-warp
+      - cursor
       - docker
       - flutter
       - fork
+      - ghostty
       - google-chrome
       - google-cloud-sdk
       - google-drive
+      - google-japanese-ime
       - karabiner-elements
       - microsoft-office
       - tableplus
-      - visual-studio-code
       - zoom
