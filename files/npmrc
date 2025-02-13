@@ -1,3 +1,7 @@
 prefix=~/.npm
 
+# set -gx NPM_PKG_GITHUB_PAT <PERSONAL_ACCESS_TOKEN>
 //npm.pkg.github.com/:_authToken=${NPM_PKG_GITHUB_PAT}
+
+# set -gx NPM_PKG_P8N_AUTH (echo -n "token-user:<SDK_TOKEN>" | base64)
+//repo.platform.p8n.app/:_auth=${NPM_PKG_P8N_AUTH}
