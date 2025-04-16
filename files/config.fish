@@ -1,6 +1,9 @@
 # disable greeting
 set fish_greeting
 
+# modify color theme
+set fish_color_command blue
+
 # editor
 set -gx EDITOR "nano"
 
