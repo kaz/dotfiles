@@ -38,6 +38,9 @@ if [ -d $NPM_PATH ]
 	fish_add_path -g $NPM_PATH
 end
 
+alias npx="pnpm dlx"
+alias pnpx="pnpm dlx"
+
 # python
 set PYTHON_INCLUDE "$HOME/.venv/bin/activate.fish"
 if [ -r $PYTHON_INCLUDE ]
