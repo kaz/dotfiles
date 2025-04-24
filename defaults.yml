@@ -53,3 +53,8 @@
     - key: DSDontWriteNetworkStores
       type: bool
       value: true
+
+- name: configure com.apple.symbolichotkeys
+  shell: |
+    defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 60 "<dict><key>enabled</key><false/></dict>"
+  changed_when: false
