@@ -20,8 +20,6 @@
     force: true
     follow: false
   loop:
-    - src: profile.zsh
-      dest: .zprofile
     - src: npmrc
       dest: .npmrc
     - src: prettierrc.yml
