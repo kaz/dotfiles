@@ -24,7 +24,6 @@
       - mas
       - mtr
       - mysql-client
-      - p7zip
       - wget
 
 - name: link brew packages
