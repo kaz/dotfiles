@@ -10,8 +10,7 @@
     global: true
     name: "{{ item }}"
   loop:
+    - "@anthropic-ai/claude-code"
     - "@trivago/prettier-plugin-sort-imports"
-    - eas-cli
     - npm-check-updates
     - prettier
-    - tsx
