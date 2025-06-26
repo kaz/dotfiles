@@ -20,6 +20,11 @@ if [ -x (command -v docker) ]
 	set -gx COMPOSE_DOCKER_CLI_BUILD 1
 end
 
+# 1password
+if [ -x (command -v op) ]
+	alias pnpm="op run --no-masking -- pnpm"
+end
+
 # go
 if [ -x (command -v go) ]
 	set -gx GOPATH "$HOME/.go"
@@ -38,8 +43,12 @@ if [ -d $NPM_PATH ]
 	fish_add_path -g $NPM_PATH
 end
 
+alias npm="pnpm"
 alias npx="pnpm dlx"
 alias pnpx="pnpm dlx"
+
+set -gx NPM_PKG_GITHUB_PAT "op://umtukmxolngqhardqo4ixmqnqe/2qz67nq4nbufxi73cbcwg2w7xi/token"
+set -gx NPM_PKG_P8N_AUTH "op://umtukmxolngqhardqo4ixmqnqe/6h4c3qo535ixozij4fdom55gre/token"
 
 # python
 set PYTHON_INCLUDE "$HOME/.venv/bin/activate.fish"
@@ -78,13 +87,11 @@ if [ -x (command -v aqua) ]
 	set -gx AQUA_GLOBAL_CONFIG $HOME/.config/aquaproj-aqua/aqua.yaml
 end
 
+# load event handlers
+source "$HOME/.config/fish/functions/on_event.fish"
+
 # load machine specific configuration
 set LOCAL_INCLUDE "$HOME/.config/fish/local.fish"
 if [ -r $LOCAL_INCLUDE ]
 	source $LOCAL_INCLUDE
-end
-
-# backup history after each command
-function __postexec_backup_history --on-event fish_postexec
-	backup_history &
 end
