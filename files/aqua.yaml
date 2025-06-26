@@ -1,15 +1,15 @@
 registries:
   - type: standard
-    ref: v4.379.0
+    ref: v4.380.0
 packages:
   - name: ariga/atlas@v0.35.0
   - name: authzed/zed@v0.30.2
-  - name: aws/aws-cli@2.27.36
+  - name: aws/aws-cli@2.27.43
   - name: aws/session-manager-plugin@1.2.707.0
-  - name: biomejs/biome@cli/v1.9.4
+  - name: biomejs/biome@@biomejs/biome@2.0.5
   - name: boyter/scc@v3.5.0
-  - name: bufbuild/buf@v1.54.0
-  - name: cloudflare/cloudflared@2025.6.0
+  - name: bufbuild/buf@v1.55.1
+  - name: cloudflare/cloudflared@2025.6.1
   - name: duckdb/duckdb@v1.3.1
   - name: getsops/sops@v3.10.2
   - name: git-lfs/git-lfs@v3.6.1
@@ -24,9 +24,9 @@ packages:
   - name: kayac/ecspresso@v2.5.0
   - name: ko-build/ko@v0.18.0
   - name: mikefarah/yq@v4.45.4
-  - name: nodejs/node@v24.2.0
+  - name: nodejs/node@v24.3.0
   - name: openfga/cli@v0.7.0
-  - name: oven-sh/bun@bun-v1.2.16
-  - name: pnpm/pnpm@v10.12.1
+  - name: oven-sh/bun@bun-v1.2.17
+  - name: pnpm/pnpm@v10.12.3
   - name: pressly/goose@v3.24.3
   - name: sqlc-dev/sqlc@v1.29.0
