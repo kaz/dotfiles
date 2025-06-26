@@ -1,0 +1,19 @@
+[
+	{
+		"key": "cmd+t",
+		"command": "workbench.action.terminal.split",
+		"when": "terminalFocus && terminalProcessSupported"
+	},
+	{
+		"key": "cmd+y",
+		"command": "redo"
+    },
+    {
+        "key": "shift+enter",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": {
+            "text": "\\\r\n"
+        },
+        "when": "terminalFocus"
+    }
+]

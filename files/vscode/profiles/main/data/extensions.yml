@@ -1,0 +1,31 @@
+builtin:
+  disabled:
+    - undefined.cursor-themes
+disabled: []
+enabled:
+  - id: Anthropic.claude-code
+    uuid: 3c13ae49-babe-45fe-8c48-5e45077a62bf
+  - id: bradlc.vscode-tailwindcss
+    uuid: 4db62a7c-7d70-419c-96d2-6c3a4dc77ea5
+  - id: bufbuild.vscode-buf
+    uuid: 211d28f8-1008-49ba-8edf-eeb90547f7cd
+  - id: dbaeumer.vscode-eslint
+    uuid: 583b2b34-2c1e-4634-8c0b-0b82e283ea3a
+  - id: esbenp.prettier-vscode
+    uuid: 96fa4707-6983-4489-b7c5-d5ffdfdcce90
+  - id: golang.go
+    uuid: d6f6cfea-4b6f-41f4-b571-6ad2ab7918da
+  - id: hashicorp.terraform
+    uuid: 4a23294b-fd16-4c51-9759-da9936474cf8
+  - id: ms-azuretools.vscode-containers
+    uuid: 2cd1d691-3d69-4d2d-ae39-fda4bc4cfd3d
+  - id: ms-azuretools.vscode-docker
+    uuid: 0479fc1c-3d67-49f9-b087-fb9069afe48f
+  - id: redhat.vscode-yaml
+    uuid: 2061917f-f76a-458a-8da9-f162de22b97e
+  - id: unifiedjs.vscode-mdx
+    uuid: af8cfc85-cb72-45d0-bae2-9a98cd0c69f3
+  - id: Vue.volar
+    uuid: a95ee795-1576-4ffa-acda-8d6e6a95c584
+  - id: zokugun.cron-tasks
+    uuid: b7bbbbd5-7a39-4312-87aa-ef6a41de67fb

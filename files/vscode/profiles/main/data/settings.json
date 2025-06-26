@@ -1,0 +1,32 @@
+{
+	"[go]": {
+		"editor.defaultFormatter": "golang.go"
+	},
+	"[proto]": {
+		"editor.defaultFormatter": "bufbuild.vscode-buf"
+	},
+	"editor.codeActionsOnSave": {
+		"source.organizeImports": "explicit"
+	},
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.dragAndDrop": false,
+	"editor.emptySelectionClipboard": false,
+	"editor.fontSize": 14,
+	"editor.formatOnPaste": true,
+	"editor.formatOnSave": true,
+	"editor.inlineSuggest.enabled": true,
+	"editor.minimap.enabled": false,
+	"explorer.confirmDragAndDrop": false,
+	"extensions.ignoreRecommendations": true,
+	"files.insertFinalNewline": true,
+	"files.trimFinalNewlines": true,
+	"files.trimTrailingWhitespace": true,
+	"git.openRepositoryInParentFolders": "always",
+	"go.toolsManagement.autoUpdate": true,
+	"terminal.integrated.fontSize": 14,
+	"update.releaseTrack": "prerelease",
+	"update.showReleaseNotes": false,
+	"workbench.activityBar.orientation": "horizontal",
+	"workbench.colorTheme": "Quiet Light",
+	"workbench.editor.empty.hint": "hidden"
+}
