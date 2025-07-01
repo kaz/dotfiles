@@ -90,8 +90,3 @@ set LOCAL_INCLUDE "$HOME/.config/fish/local.fish"
 if [ -r $LOCAL_INCLUDE ]
 	source $LOCAL_INCLUDE
 end
-
-# backup history after each command
-function __postexec_backup_history --on-event fish_postexec
-	backup_history &
-end
