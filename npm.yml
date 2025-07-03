@@ -12,6 +12,8 @@
   loop:
     - "@anthropic-ai/claude-code"
     - "@google/gemini-cli"
+    - "@prettier/plugin-oxc"
     - "@trivago/prettier-plugin-sort-imports"
     - npm-check-updates
+    - oxlint
     - prettier

@@ -1,3 +1,7 @@
+plugins:
+  - "@prettier/plugin-oxc"
+  - "@trivago/prettier-plugin-sort-imports"
+
 printWidth: 120
 useTabs: true
 trailingComma: all
