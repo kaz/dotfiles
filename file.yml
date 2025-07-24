@@ -11,7 +11,7 @@
     - .config/ghostty
     - .config/aquaproj-aqua
     - .config/karabiner/assets/complex_modifications
-    - Library/KeyBindings
+    - Library/Application Support/usql
 
 - name: link files
   file:
@@ -37,13 +37,11 @@
       dest: .config/aquaproj-aqua/aqua.yaml
     - src: config.fish
       dest: .config/fish/config.fish
+    - src: functions
+      dest: .config/fish/functions
     - src: ghostty.config
       dest: .config/ghostty/config
     - src: my-hhkb-keymap.json
       dest: .config/karabiner/assets/complex_modifications/my-hhkb-keymap.json
-    - src: DefaultKeyBinding.dict
-      dest: Library/KeyBindings/DefaultKeyBinding.dict
-    - src: database
-      dest: .database
-    - src: functions
-      dest: .config/fish/functions
+    - src: usql.yaml
+      dest: Library/Application Support/usql/config.yaml
