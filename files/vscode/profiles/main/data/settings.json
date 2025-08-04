@@ -5,9 +5,10 @@
 	"[proto]": {
 		"editor.defaultFormatter": "bufbuild.vscode-buf"
 	},
-	"editor.codeActionsOnSave": {
-		"source.organizeImports": "explicit"
+	"[mdx]": {
+		"editor.codeActionsOnSave": { "source.organizeImports": "never" }
 	},
+	"editor.codeActionsOnSave": { "source.organizeImports": "explicit" },
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
 	"editor.dragAndDrop": false,
 	"editor.emptySelectionClipboard": false,
@@ -16,15 +17,16 @@
 	"editor.formatOnSave": true,
 	"editor.inlineSuggest.enabled": true,
 	"editor.minimap.enabled": false,
+	"editor.quickSuggestions": { "strings": "on" },
 	"explorer.confirmDragAndDrop": false,
 	"extensions.ignoreRecommendations": true,
+	"files.associations": { "*.css": "tailwindcss" },
 	"files.insertFinalNewline": true,
 	"files.trimFinalNewlines": true,
 	"files.trimTrailingWhitespace": true,
 	"git.openRepositoryInParentFolders": "always",
 	"go.toolsManagement.autoUpdate": true,
 	"terminal.integrated.fontSize": 14,
-	"update.releaseTrack": "prerelease",
 	"update.showReleaseNotes": false,
 	"workbench.activityBar.orientation": "horizontal",
 	"workbench.colorTheme": "Quiet Light",
