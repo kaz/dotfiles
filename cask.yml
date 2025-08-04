@@ -6,12 +6,11 @@
       - android-studio
       - cloudflare-warp
       - cursor
-      - docker
-      - flutter
+      - docker-desktop
       - fork
+      - gcloud-cli
       - ghostty
       - google-chrome
-      - google-cloud-sdk
       - google-drive
       - google-japanese-ime
       - karabiner-elements
