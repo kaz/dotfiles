@@ -31,8 +31,6 @@
       dest: .gitignore_global
     - src: ssh.config
       dest: .ssh/config
-    - src: CLAUDE.md
-      dest: .claude/CLAUDE.md
     - src: aqua.yaml
       dest: .config/aquaproj-aqua/aqua.yaml
     - src: config.fish
