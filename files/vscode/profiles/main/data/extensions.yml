@@ -3,8 +3,6 @@ builtin:
     - undefined.cursor-themes
 disabled: []
 enabled:
-  - id: Anthropic.claude-code
-    uuid: 3c13ae49-babe-45fe-8c48-5e45077a62bf
   - id: bradlc.vscode-tailwindcss
     uuid: 4db62a7c-7d70-419c-96d2-6c3a4dc77ea5
   - id: bufbuild.vscode-buf
@@ -17,6 +15,8 @@ enabled:
     uuid: d6f6cfea-4b6f-41f4-b571-6ad2ab7918da
   - id: hashicorp.terraform
     uuid: 4a23294b-fd16-4c51-9759-da9936474cf8
+  - id: openai.chatgpt
+    uuid: 90b52117-6fd1-4f1c-9e14-256bd6e21d79
   - id: redhat.vscode-yaml
     uuid: 2061917f-f76a-458a-8da9-f162de22b97e
   - id: unifiedjs.vscode-mdx
