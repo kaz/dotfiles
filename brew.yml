@@ -8,11 +8,11 @@
     name:
       - ansible
       - aqua
-      - cocoapods
       - fish
       - git
       - imagemagick
       - make
       - mas
       - mtr
+      - pandoc
       - wget
