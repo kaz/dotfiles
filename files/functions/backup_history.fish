@@ -1,25 +1,7 @@
 function backup_history
+	set FISH_DIR "$HOME/.local/share/fish"
+	mkdir -p "$FISH_DIR/backup"
+
 	history save
-
-	set BACKUP /tmp/fish_history.zstd
-	zstdmt -q -f -o "$BACKUP" "$HOME/.local/share/fish/fish_history"
-
-	__backup_history_in_dir "$BACKUP" "$HOME/Library/Mobile Documents/com~apple~CloudDocs/fish_history_backup"
-
-	set GOOGLE_DRIVE_MOUNT_PATH "$HOME/Google Drive/マイドライブ"
-	if [ -d "$GOOGLE_DRIVE_MOUNT_PATH" ]
-		__backup_history_in_dir "$BACKUP" "$GOOGLE_DRIVE_MOUNT_PATH/archive/fish_history_backup"
-	else
-		echo "backup_history: Google Drive is not mounted."
-	end
-
-	rm "$BACKUP"
-end
-
-function __backup_history_in_dir -a BACKUP DIR
-	if [ ! -d "$DIR" ]
-		mkdir -p "$DIR"
-	end
-
-	cp "$BACKUP" "$DIR/fish_history."(hostname)".zstd"
+	zstdmt -q -f -o "$FISH_DIR/backup/fish_history.$(hostname).zstd" "$FISH_DIR/fish_history"
 end
