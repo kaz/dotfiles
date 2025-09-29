@@ -4,14 +4,12 @@
     name:
       - 1password
       - android-studio
-      - cloudflare-warp
       - cursor
       - docker-desktop
       - fork
       - gcloud-cli
       - ghostty
       - google-chrome
-      - google-drive
       - google-japanese-ime
       - karabiner-elements
       - microsoft-office
