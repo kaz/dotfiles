@@ -26,6 +26,6 @@
 	required = true
 
 [url "git@github.com:"]
-    insteadOf = https://github.com/
+	insteadOf = https://github.com/
 [url "https://github.com/Homebrew/"]
 	insteadOf = https://github.com/Homebrew/
