@@ -4,7 +4,7 @@
     global: true
     name: "{{ item }}"
   loop:
-    - "@google/gemini-cli"
-    - "@openai/codex"
     - npm-check-updates
+    - oxfmt
+    - oxlint
     - prettier
