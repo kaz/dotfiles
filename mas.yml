@@ -1,6 +1,0 @@
-- name: install mas packages
-  mas:
-    state: latest
-    id: "{{ item }}"
-  loop:
-    - 1444383602 # GoodNotes
