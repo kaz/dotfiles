@@ -22,6 +22,8 @@
   loop:
     - src: npmrc
       dest: .npmrc
+    - src: oxfmtrc.json
+      dest: .oxfmtrc.json
     - src: prettierrc.yml
       dest: .prettierrc.yml
     - src: gitconfig

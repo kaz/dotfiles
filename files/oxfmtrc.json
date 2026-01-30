@@ -1,0 +1,16 @@
+{
+	"printWidth": 120,
+	"useTabs": true,
+	"trailingComma": "all",
+	"arrowParens": "avoid",
+	"experimentalSortImports": {
+		"newlinesBetween": false,
+		"partitionByNewline": true
+	},
+	"experimentalSortPackageJson": {
+		"sortScripts": true
+	},
+	"experimentalTailwindcss": {
+		"functions": ["cn", "clsx", "twMerge"]
+	}
+}
