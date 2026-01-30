@@ -11,6 +11,7 @@
     - .config/aquaproj-aqua
     - .config/karabiner/assets/complex_modifications
     - Library/Application Support/usql
+    - Library/Application Support/Cursor/User
 
 - name: link files
   file:
@@ -44,3 +45,7 @@
       dest: .config/karabiner/assets/complex_modifications/my-hhkb-keymap.json
     - src: usql.yaml
       dest: Library/Application Support/usql/config.yaml
+    - src: vscode/settings.json
+      dest: Library/Application Support/Cursor/User/settings.json
+    - src: vscode/keybindings.json
+      dest: Library/Application Support/Cursor/User/keybindings.json

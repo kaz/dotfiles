@@ -1,0 +1,13 @@
+- name: install vscode extensions
+  vscode_extension:
+    name: "{{ item }}"
+  loop:
+    - bradlc.vscode-tailwindcss
+    - bufbuild.vscode-buf
+    - docker.docker
+    - golang.go
+    - hashicorp.terraform
+    - oxc.oxc-vscode
+    - redhat.vscode-yaml
+    - unifiedjs.vscode-mdx
+    - vue.volar

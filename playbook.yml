@@ -31,12 +31,12 @@
     - import_tasks: npm.yml
       tags:
         - npm
-    - import_tasks: gcloud.yml
-      tags:
-        - gcloud
     - import_tasks: cask.yml
       tags:
         - cask
     - import_tasks: mas.yml
       tags:
         - mas
+    - import_tasks: vscode.yml
+      tags:
+        - vscode
