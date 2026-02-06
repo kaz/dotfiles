@@ -11,6 +11,4 @@
       - git
       - imagemagick
       - make
-      - mtr
-      - pandoc
       - wget
