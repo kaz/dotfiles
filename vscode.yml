@@ -5,6 +5,7 @@
     - bradlc.vscode-tailwindcss
     - bufbuild.vscode-buf
     - docker.docker
+    - esbenp.prettier-vscode
     - golang.go
     - hashicorp.terraform
     - oxc.oxc-vscode
