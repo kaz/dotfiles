@@ -20,11 +20,12 @@
 	"files.trimTrailingWhitespace": true,
 	"git.openRepositoryInParentFolders": "always",
 	"go.toolsManagement.autoUpdate": true,
+	"oxc.typeAware": true,
 	"redhat.telemetry.enabled": false,
 	"terminal.integrated.fontSize": 14,
 	"typescript.updateImportsOnFileMove.enabled": "never",
 	"update.showReleaseNotes": false,
 	"window.commandCenter": true,
 	"workbench.activityBar.orientation": "horizontal",
-	"workbench.colorTheme": "Quiet Light"
+	"workbench.colorTheme": "Quiet Light",
 }

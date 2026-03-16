@@ -7,4 +7,5 @@
     - npm-check-updates
     - oxfmt
     - oxlint
+    - oxlint-tsgolint
     - prettier
