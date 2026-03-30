@@ -9,7 +9,6 @@
     - .config/fish
     - .config/ghostty
     - .config/aquaproj-aqua
-    - .config/karabiner/assets/complex_modifications
     - Library/Application Support/usql
     - Library/Application Support/Cursor/User
 
@@ -41,8 +40,6 @@
       dest: .config/fish/functions
     - src: ghostty.config
       dest: .config/ghostty/config
-    - src: my-hhkb-keymap.json
-      dest: .config/karabiner/assets/complex_modifications/my-hhkb-keymap.json
     - src: usql.yaml
       dest: Library/Application Support/usql/config.yaml
     - src: vscode/settings.json
