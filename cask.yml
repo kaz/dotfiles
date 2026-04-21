@@ -4,6 +4,7 @@
     name:
       - 1password
       - android-studio
+      - claude
       - cursor
       - docker-desktop
       - fork
