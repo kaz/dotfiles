@@ -6,6 +6,7 @@
       - android-studio
       - claude
       - cursor
+      - codex-app
       - docker-desktop
       - fork
       - gcloud-cli
