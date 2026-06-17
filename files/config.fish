@@ -41,18 +41,6 @@ end
 set -gx NPM_PKG_GITHUB_PAT "op://umtukmxolngqhardqo4ixmqnqe/2qz67nq4nbufxi73cbcwg2w7xi/token"
 set -gx NPM_PKG_P8N_AUTH "op://umtukmxolngqhardqo4ixmqnqe/6h4c3qo535ixozij4fdom55gre/token"
 
-# bun
-set BUN_PATH "$HOME/.bun/bin"
-if [ -d $BUN_PATH ]
-	fish_add_path -g $BUN_PATH
-	alias bunx="bun x"
-end
-
-# pnpm
-if [ -x (command -v pnpm) ]
-	alias pnpx="pnpm dlx"
-end
-
 # python
 set PYTHON_INCLUDE "$HOME/.venv/bin/activate.fish"
 if [ -r $PYTHON_INCLUDE ]
