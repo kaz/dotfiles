@@ -26,16 +26,10 @@ if [ -x (command -v go) ]
 	fish_add_path -g "$GOPATH/bin"
 end
 
-# ruby
-set RUBY_PATH "$HOMEBREW_PREFIX/opt/ruby/bin"
-if [ -d $RUBY_PATH ]
-	fish_add_path -g $RUBY_PATH
-end
-
 # npm
-set NPM_PATH "$HOME/.npm/bin"
-if [ -d $NPM_PATH ]
-	fish_add_path -g $NPM_PATH
+set NPM_BIN_PATH "$HOME/.npm/bin"
+if [ -d $NPM_BIN_PATH ]
+	fish_add_path -g $NPM_BIN_PATH
 end
 
 set -gx NPM_PKG_GITHUB_PAT "op://umtukmxolngqhardqo4ixmqnqe/2qz67nq4nbufxi73cbcwg2w7xi/token"
@@ -49,15 +43,11 @@ if [ -r $PYTHON_INCLUDE ]
 	alias pip="uv pip"
 end
 
-# gcloud
-set GCLOUD_INCLUDE "$HOMEBREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc"
-if [ -r $GCLOUD_INCLUDE ]
-	source $GCLOUD_INCLUDE
-end
-
-# gke-gcloud-auth-plugin
-if [ -x (command -v gke-gcloud-auth-plugin) ]
-	set -gx USE_GKE_GCLOUD_AUTH_PLUGIN True
+# gcloud-cli
+set GOOGLE_CLOUD_SDK_BIN_PATH "$HOMEBREW_PREFIX/share/google-cloud-sdk/bin"
+if [ -d $GOOGLE_CLOUD_SDK_BIN_PATH ]
+	set -gx CLOUDSDK_PYTHON (which python)
+	fish_add_path -g $GOOGLE_CLOUD_SDK_BIN_PATH
 end
 
 # Android SDK
