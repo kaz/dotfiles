@@ -1,0 +1,19 @@
+- name: clone/pull repositories
+  ignore_errors: true
+  git:
+    repo: git@github.com:{{ item.repo }}.git
+    dest: ~/{{ item.dest }}
+  loop:
+    - repo: kaz/skills
+      dest: .agents/skills
+
+- name: link repositories
+  file:
+    state: link
+    src: ~/{{ item.src }}
+    dest: ~/{{ item.dest }}
+    force: true
+    follow: false
+  loop:
+    - src: .agents/skills
+      dest: .claude/skills

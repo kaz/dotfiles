@@ -37,3 +37,6 @@
     - import_tasks: vscode.yml
       tags:
         - vscode
+    - import_tasks: git.yml
+      tags:
+        - git

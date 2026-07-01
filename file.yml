@@ -5,6 +5,8 @@
     mode: 0700
   loop:
     - .ssh
+    - .agents
+    - .claude
     - .local/share
     - .config/fish
     - .config/ghostty
