@@ -3,11 +3,11 @@
 	"useTabs": true,
 	"trailingComma": "all",
 	"arrowParens": "avoid",
-	"experimentalSortImports": {
+	"sortImports": {
 		"newlinesBetween": false,
 		"partitionByNewline": true
 	},
-	"experimentalSortPackageJson": {
+	"sortPackageJson": {
 		"sortScripts": true
 	},
 	"experimentalTailwindcss": {

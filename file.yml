@@ -24,8 +24,6 @@
   loop:
     - src: npmrc
       dest: .npmrc
-    - src: oxfmtrc.json
-      dest: .oxfmtrc.json
     - src: prettierrc.yml
       dest: .prettierrc.yml
     - src: gitconfig
@@ -34,6 +32,8 @@
       dest: .gitignore_global
     - src: ssh.config
       dest: .ssh/config
+    - src: claude.settings.json
+      dest: .claude/settings.json
     - src: aqua.yaml
       dest: .config/aquaproj-aqua/aqua.yaml
     - src: config.fish
