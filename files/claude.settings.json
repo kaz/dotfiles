@@ -5,9 +5,5 @@
 		"commit": "",
 		"pr": "",
 		"sessionUrl": false
-	},
-	"env": {
-		"AQUA_GLOBAL_CONFIG": "~/.config/aquaproj-aqua/aqua.yaml",
-		"JAVA_HOME": "/Applications/Android Studio.app/Contents/jbr/Contents/Home"
 	}
 }
