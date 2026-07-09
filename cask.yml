@@ -5,13 +5,14 @@
       - 1password
       - android-studio
       - claude
-      - cursor
       - codex-app
+      - cursor
       - docker-desktop
       - fork
       - gcloud-cli
       - ghostty
       - google-chrome
       - microsoft-office
+      - obsidian
       - postico
       - zoom
