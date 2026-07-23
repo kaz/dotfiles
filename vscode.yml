@@ -1,5 +1,6 @@
 - name: install vscode extensions
   vscode_extension:
+    code_path: "/Applications/Cursor.app/Contents/Resources/app/bin/code"
     name: "{{ item }}"
   loop:
     - Anthropic.claude-code

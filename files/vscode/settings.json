@@ -27,5 +27,6 @@
 	"terminal.integrated.fontSize": 14,
 	"update.showReleaseNotes": false,
 	"window.commandCenter": true,
-	"workbench.preferredLightColorTheme": "Quiet Light"
+	"workbench.preferredLightColorTheme": "Quiet Light",
+	"window.autoDetectColorScheme": true
 }
