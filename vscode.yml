@@ -3,7 +3,7 @@
     code_path: "/Applications/Cursor.app/Contents/Resources/app/bin/code"
     name: "{{ item }}"
   loop:
-    - Anthropic.claude-code
+    - anthropic.claude-code
     - bradlc.vscode-tailwindcss
     - bufbuild.vscode-buf
     - docker.docker
