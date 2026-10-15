@@ -39,7 +39,7 @@
     - src: aqua.yaml
       dest: .config/aquaproj-aqua/aqua.yaml
     - src: config.fish
-      dest: .config/fish/config.fish
+      dest: .config/fish/preset.fish
     - src: functions
       dest: .config/fish/functions
     - src: ghostty.config

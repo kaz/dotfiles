@@ -9,6 +9,12 @@
     src: ~/Library/Mobile Documents/com~apple~CloudDocs/fish
     dest: ~/.local/share/fish
 
+- name: load preset fish config
+  lineinfile:
+    path: ~/.config/fish/config.fish
+    line: "source ~/.config/fish/preset.fish"
+    create: true
+
 - name: find fish in PATH
   shell: which fish
   register: fish_path

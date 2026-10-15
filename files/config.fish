@@ -77,9 +77,3 @@ end
 
 # load event handlers
 source "$HOME/.config/fish/functions/on_event.fish"
-
-# load machine specific configuration
-set LOCAL_INCLUDE "$HOME/.config/fish/local.fish"
-if [ -r $LOCAL_INCLUDE ]
-	source $LOCAL_INCLUDE
-end
