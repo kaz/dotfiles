@@ -38,8 +38,8 @@
       dest: .claude/settings.json
     - src: aqua.yaml
       dest: .config/aquaproj-aqua/aqua.yaml
-    - src: config.fish
-      dest: .config/fish/preset.fish
+    - src: fish
+      dest: .config/fish/conf.d
     - src: functions
       dest: .config/fish/functions
     - src: ghostty.config
