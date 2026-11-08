@@ -3,5 +3,5 @@ function backup_history
 	mkdir -p "$FISH_DIR/backup"
 
 	history save
-	zstdmt -q -f -o "$FISH_DIR/backup/fish_history.$(hostname).zstd" "$FISH_DIR/fish_history"
+	cp -f "$FISH_DIR/fish_history" "$FISH_DIR/backup/fish_history.$(hostname)"
 end
