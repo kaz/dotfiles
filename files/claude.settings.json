@@ -1,9 +1,0 @@
-{
-	"agentPushNotifEnabled": true,
-	"inputNeededNotifEnabled": true,
-	"attribution": {
-		"commit": "",
-		"pr": "",
-		"sessionUrl": false
-	}
-}
