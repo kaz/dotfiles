@@ -17,7 +17,6 @@ set -gx SSH_AUTH_SOCK "$HOME/Library/Group Containers/2BUA8C4S2C.com.1password/t
 # aqua
 if command -q aqua
 	fish_add_path -g (aqua root-dir)/bin
-	set -gx AQUA_GLOBAL_CONFIG $HOME/.config/aquaproj-aqua/aqua.yaml
 end
 
 # docker
